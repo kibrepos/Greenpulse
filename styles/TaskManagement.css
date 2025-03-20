@@ -1,0 +1,1338 @@
+.task-container {
+  display: flex;
+  flex: 1;
+}
+
+/* Sidebar Section */
+.task-sidebar {
+  width: 210px;
+  padding: 20px;
+
+}
+
+/* Content Section */
+.task-content {
+  flex: 1;
+  padding: 20px;
+}
+
+
+
+.new-task-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.new-task-btn:hover {
+  background-color: #218838;
+}
+
+
+.tksks-filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tksks-event-dropdown,
+.tksks-status-dropdown,
+.tksks-date-dropdown,
+.tksks-sort-dropdown
+{
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.tksks-search-input{
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 98%;
+}
+.my-tasks-btn {
+  background-color: #0ea87a; /* White background */
+  color: #ffffff; /* Green text */
+  border: 2px solid #0ea87a; /* Green border for a clean look */
+  border-radius: 20px; /* Rounded edges */
+  font-size: 14px; /* Slightly smaller text */
+  font-weight: bold; /* Emphasize the button text */
+  padding: 8px 20px; /* Adjust padding for a sleek design */
+  text-transform: uppercase; /* Make text uppercase */
+  cursor: pointer; /* Pointer on hover */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.my-tasks-btn:hover {
+  background-color: #0ea87a; /* Green background on hover */
+  color: #ffffff; /* White text on hover */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+.my-tasks-btns {
+  background-color: #5d82ff; /* White background */
+  color: #ffffff; /* Green text */
+  border: 2px solid #7982ff; /* Green border for a clean look */
+  border-radius: 20px; /* Rounded edges */
+  font-size: 14px; /* Slightly smaller text */
+  font-weight: bold; /* Emphasize the button text */
+  padding: 8px 20px; /* Adjust padding for a sleek design */
+  text-transform: uppercase; /* Make text uppercase */
+  cursor: pointer; /* Pointer on hover */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.my-tasks-btns:hover {
+  background-color: #8aa5ff; /* Green background on hover */
+  color: #ffffff; /* White text on hover */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+
+/* Apply styles to the Reset button */
+.tksks-reset-btn {
+background-color: transparent ;
+color: rgb(255, 0, 0);
+border: none;
+padding: 10px 15px;
+border-radius: 5px;
+display: flex;
+align-items: center;
+gap: 5px;
+cursor: pointer;
+transition: background-color 0.2s;
+margin-top: -2px;
+}
+
+.tksks-reset-btn:hover {
+color: #c62828;
+}
+.tksks-trash-btn {
+background-color: transparent;
+color: #ff0000;
+border: none;
+padding: 8px 12px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 20px;
+transition: background-color 0.2s;
+margin-top: -2px;
+}
+
+.tksks-trash-btn:disabled {background-color: transparent;
+color: #888;
+cursor: not-allowed;}
+
+
+
+
+
+
+
+/* Modal Overlay */
+.altask-modal-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+z-index: 9999;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* Modal Content */
+.altask-modal-content {
+background: #fff;
+position:relative;
+border-radius: 8px;
+padding: 20px;
+max-width: 900px;
+width: 100%;
+max-height: 80%;
+min-height: 70%;
+overflow-y: auto; 
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Form Layout */
+.altask-form {
+display: flex;
+justify-content: space-between;
+gap: 20px;
+}
+
+/* Left and Right Columns */
+.altask-left-column,
+.altask-right-column {
+flex: 1;
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+/* Labels */
+.altask-label {
+font-size: 16px;
+font-weight: 600;
+margin-bottom: 5px;
+color: #333;
+}
+
+/* Inputs and Textareas */
+.altask-input,
+.altask-textarea,
+.altask-date-input,
+.altask-event-dropdown {
+border: 1px solid #ccc;
+border-radius: 5px;
+padding: 10px;
+font-size: 14px;
+width: 100%;
+box-sizing: border-box;
+}
+
+.altask-input:focus,
+.altask-textarea:focus,
+.altask-date-input:focus {
+outline: none;
+border-color: #007bff;
+box-shadow: 0px 0px 4px rgba(0, 123, 255, 0.5);
+}
+
+/* Textarea Styling */
+.altask-textarea {
+min-height: 80px;
+resize: vertical;
+}
+
+/* File Attachments Section */
+.altask-file-section {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.altask-file-btn {
+display: inline-block;
+padding: 10px 20px;
+background: #f1f1f1;
+border: 1px dashed #ccc;
+border-radius: 5px;
+cursor: pointer;
+text-align: center;
+color: #666;
+font-size: 14px;
+position: relative;
+}
+
+.altask-file-btn:hover {
+background: #e1e1e1;
+}
+
+
+.altask-file-list {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+
+.altask-file-item {
+display: flex;
+align-items: center; /* Vertically centers content */
+justify-content: space-between; /* Ensures file name and X button are spaced */
+background: #f9f9f9;
+border: 1px solid #ddd;
+border-radius: 4px;
+padding: 5px 10px; /* Smaller padding */
+margin-top: 5px;
+font-size: 13px; /* Slightly smaller font size */
+color: #333;
+height: 30px; /* Adjust height */
+line-height: 30px; /* Aligns text vertically */
+}
+
+.altask-file-item span {
+flex: 1;
+text-align: left;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+.altask-file-item a {
+
+background: #f9f9f9;
+color: #333;
+
+}
+.altask-file-remove-btn {
+background: none;
+color: #ff4d4d;
+border: none;
+border-radius: 50%;
+font-size: 20px;
+font-weight: bold;
+cursor: pointer;
+margin-top: 0px;
+display: flex;
+align-items: center; /* Centers X vertically */
+justify-content: center; /* Centers X horizontally */
+transition: background-color 0.3s ease;
+}
+.altask-file-link {
+font-size: 14px;
+color: #007bff;
+text-decoration: none;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis; /* Ensures long filenames are truncated */
+flex: 1; /* Ensures the link takes up available space */
+background: none; /* Removes any inherited background */
+background-color: transparent; /* Ensures no background color */
+}
+
+
+.altask-file-link:hover {
+color: #0056b3;
+text-decoration: underline;
+background-color: transparent;
+}
+
+
+
+/* Assign to Members and Committees */
+.altask-assign-to-section,
+.altask-assign-committees {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+}
+
+/* Chips Container */
+.altask-chips {
+display: flex;
+align-items: center;
+gap: 10px;
+flex-wrap: wrap; /* Ensure chips wrap to the next line */
+}
+
+/* Individual Chip */
+.altask-chip {
+background: #045730; /* Adjusted color for consistency */
+padding: 8px 15px; /* Increased padding for better appearance */
+border-radius: 20px; /* Rounded corners */
+font-size: 14px; /* Adjusted font size */
+color: #fff; /* Text color */
+display: flex;
+align-items: center;
+gap: 10px;
+position: relative;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+.altask-assign-committees .altask-chip {
+background: #a0a0a0; /* Default gray for committee chips */
+}
+
+/* Selected Committees Chips */
+.altask-assign-committees .altask-chip-selected {
+background: #005741; 
+color: #fff;
+}
+
+.altask-chip-remove {
+background: transparent; /* Green background for 'X' button */
+color: #ffffff; /* White 'X' text */
+border: none;
+border-radius: 50%;
+font-size: 20px; /* Adjusted size */
+width: 10px;
+height: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+/* Plus Button Styling */
+.altask-add-btn {
+background: #e0e0e0;
+border: none;
+border-radius: 50%;
+width: 30px;
+height: 30px;
+font-size: 18px;
+color: #666;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.altask-add-btn:hover {
+background: #bdbdbd;
+}
+
+
+.altask-dropdown {
+position: absolute;
+background: #fff;
+border: 1px solid #ccc;
+border-radius: 5px;
+max-height: 200px;
+overflow-y: auto;
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+z-index: 1000;
+padding: 10px;
+}
+
+.altask-dropdown-search {
+width: 100%;
+padding: 8px;
+border: 1px solid #ccc;
+border-radius: 5px;
+margin-bottom: 10px;
+font-size: 14px;
+box-sizing: border-box;
+}
+
+.altask-dropdown-item {
+padding: 8px 12px;
+cursor: pointer;
+}
+
+.altask-dropdown-item:hover {
+background-color: #f1f1f1;
+}
+
+/* Modal Actions */
+.altask-modal-actions {
+display: flex;
+justify-content: flex-end;
+gap: 15px;
+margin-top: 20px;
+}
+
+.altask-submit-btn {
+background: #28a745;
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+}
+
+.altask-submit-btn:hover {
+background: #218838;
+}
+
+.altask-cancel-btn {
+background: #dc3545;
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+}
+
+.altask-cancel-btn:hover {
+background: #c82333;
+}
+
+
+/* Date Inputs in a Row */
+.date-container {
+display: flex;
+justify-content: space-between;
+gap: 10px;
+margin-bottom: 20px;
+}
+
+.date-container div {
+flex: 1;
+}
+
+.status-badge {
+display: inline-block;
+padding: 5px 10px;
+border-radius: 15px;
+font-size: 0.9rem;
+font-weight: bold;
+color: white;
+text-align: center;
+min-width: 80px;
+}
+
+/* Status Colors */
+.status-badge.started {
+background-color: #ffcc00; /* Yellow */
+}
+.status-badge.in-progress {
+background-color: #007bff; /* Blue */
+color: #fff;
+}
+
+.status-badge.completed {
+background-color: #28a745; /* Green for Completed */
+color: #fff; /* White text for readability */
+}
+
+.status-badge.overdue {
+background-color: #dc3545; /* Red for Overdue */
+color: #fff; /* White text for readability */
+}
+.status-badge.reassigned {
+background-color: #004691; /* Red for Overdue */
+color: #fff; /* White text for readability */
+}
+.status-badge.extended {
+background-color: #007bff; /* Blue for not overdue */
+color: white;
+}
+
+.status-badge.extended-overdue {
+background-color: #dc3545; /* Red for overdue */
+color: white;
+}
+
+
+/* Scrollbar Styling */
+.altask-modal-content::-webkit-scrollbar {
+width: 8px;
+}
+
+.altask-modal-content::-webkit-scrollbar-thumb {
+background: #ccc;
+border-radius: 4px;
+}
+
+.altask-modal-content::-webkit-scrollbar-thumb:hover {
+background: #999;
+}
+.status-badge {
+display: inline-block;
+padding: 5px 10px;
+border-radius: 12px;
+font-size: 12px;
+font-weight: bold;
+color: white;
+text-align: center;
+}
+
+.action-btn {
+background-color: #007bff;
+border: 1px solid #ccc;
+padding: 5px 10px;
+font-size: 14px; /* Increase button text size */
+padding: 8px 12px; /* Add more padding for larger buttons */
+cursor: pointer;
+color: #fff;
+transition: background-color 0.3s ease;
+}
+
+
+.action-btn:hover {
+background-color: #0056b3; /* Darker blue on hover */
+transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Table container to make it scrollable */
+.table-container {
+height: 78vh; /* Adjust the height to suit your needs */
+overflow-y: auto; /* Add vertical scroll when needed */
+}
+
+/* General table styling */
+.task-table {
+width: 100%;
+border-collapse: collapse;
+font-size: 14px;
+
+}
+
+.task-table th,
+.task-table td {
+padding: 12px;
+text-align: left;
+border-bottom: 1px solid #ddd;
+
+}
+
+.task-table th {
+background-color: #f8f9fa;
+font-weight: bold;
+position: sticky; /* Keeps the header fixed */
+top: 0; /* Ensures the header stays at the top */
+z-index: 1;
+font-size: 15px
+}
+
+/* Adjust column widths */
+.task-table td:nth-child(3),
+.task-table th:nth-child(3) {
+width: 25%; /* Make the "Tasks" column wider */
+max-width: 300px; /* Optional max width */
+
+}
+
+/* Ensure ellipsis for long descriptions */
+.task-table td:nth-child(3) p {
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap; /* Prevent line wrapping */
+margin: 0; /* Remove extra spacing around the description */
+}
+
+/* Optional styling for the title inside the Tasks column */
+.task-table td:nth-child(3) strong {
+display: block; /* Place the title on its own line */
+font-size: 15px;
+margin-bottom: 5px; /* Space between title and description */
+}
+
+
+/* Dropdown Container */
+.task-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.task-dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  right: 65px;
+  bottom: 30%;
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Rounded corners for a modern look */
+  padding: 10px 0; /* Space between buttons */
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2); /* Softer shadow for a clean effect */
+  min-width: 150px; /* Ensure consistent width */
+ 
+  overflow-y: auto; /* Add vertical scroll when content overflows */
+  font-size: 14px; /* Slightly larger font for readability */
+  transform: translateY(-10px); /* Subtle upward transition */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0; /* Initially hidden */
+  pointer-events: none; /* Prevent interactions when hidden */
+}
+
+/* Show Dropdown on Hover */
+.task-dropdown:hover .task-dropdown-content {
+display: block;
+opacity: 1; /* Make visible */
+pointer-events: auto; /* Enable interactions */
+transform: translateY(0); /* Slide into position */
+}
+
+/* Dropdown Buttons */
+.task-dropdown-content button {
+  background: none;
+  border: none;
+  padding: 9px 14px; /* Add more padding for better usability */
+  width: 100%; /* Full width of the dropdown */
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px; /* Uniform font size */
+  color: #333; /* Neutral text color */
+  transition: background-color 0.3s, color 0.3s; /* Smooth hover transitions */
+}
+
+/* Button Hover Effect */
+.task-dropdown-content button:hover {
+background-color: #f0f4ff; /* Soft blue background on hover */
+color: #1a73e8; /* Blue for hover text color */
+border-radius: 5px; /* Slightly rounded hover effect */
+}
+
+/* Dropdown Animation */
+@keyframes fadeIn {
+from {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+
+/* Scrollbar styling for dropdown */
+.table-container::-webkit-scrollbar {
+width: 8px; /* Width of the scrollbar */
+}
+
+.table-container::-webkit-scrollbar-track {
+background: #f1f1f1; /* Background of the scrollbar track */
+border-radius: 10px; /* Rounded edges for track */
+}
+
+.table-container::-webkit-scrollbar-thumb {
+background-color: #888; /* Color of the scrollbar thumb */
+border-radius: 10px; /* Rounded edges for thumb */
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+background-color: #555; /* Darker color on hover */
+}
+
+
+
+
+
+
+/* Modal Overlay */
+.task-details-modal-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+z-index: 9999;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* Modal Content */
+.task-details-modal-content {
+background: #fff;
+border-radius: 8px;
+padding: 25px;
+max-width: 600px;
+position: relative;
+width: 90%;
+word-wrap: break-word; /* Break long words */
+word-break: break-word; /* Ensure proper text wrapping */
+overflow-wrap: break-word; /* Compatible property for text wrapping */
+overflow-y: auto; /* Enable scrolling if content exceeds modal height */
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+animation: fadeIn 0.3s ease-in-out;
+font-family: 'Arial', sans-serif;
+line-height: 1.6;
+font-size: 14px;
+color: #333;
+}
+
+/* Task Details Header */
+.task-details-modal-content h3 {
+font-size: 22px;
+font-weight: bold;
+color: #333;
+margin-bottom: 20px;
+text-align: center;
+border-bottom: 1px solid #ddd;
+padding-bottom: 10px;
+}
+
+/* Task Details Section */
+.task-details-section {
+margin-bottom: 15px;
+}
+
+/* Row Styling */
+.task-details-row {
+margin-bottom: 12px; /* Space between rows */
+display: flex;
+flex-direction: column;
+}
+
+/* Labels and Data */
+.task-details-modal-content p {
+margin: 0;
+padding: 0;
+}
+
+.task-details-modal-content strong {
+font-weight: 600;
+color: #000;
+margin-right: 5px;
+display: inline-block;
+}
+
+/* Status Badge */
+.status-badge {
+display: inline-block;
+padding: 6px 12px;
+border-radius: 12px;
+font-size: 13px;
+font-weight: bold;
+color: white;
+text-align: center;
+margin-top: 5px;
+}
+
+/* Status Colors */
+.status-badge.started {
+background-color: #ffcc00; /* Yellow */
+}
+
+.status-badge.in-progress {
+background-color: #007bff; /* Blue */
+color: #fff;
+}
+
+.status-badge.completed {
+background-color: #28a745; /* Green for Completed */
+color: #fff; /* White text for readability */
+}
+
+.status-badge.overdue {
+background-color: #dc3545; /* Red for Overdue */
+color: #fff; /* White text for readability */
+}
+
+/* File Attachments List */
+.task-details-modal-content ul {
+margin: 10px 0 0 20px; /* Add spacing for bullets */
+padding: 0;
+list-style: none; /* Disable default bullet styling */
+color: #333; /* Ensure good contrast */
+}
+
+.task-details-modal-content ul li {
+margin-bottom: 8px; /* Add spacing between items */
+font-size: 14px;
+display: flex;
+align-items: center; /* Vertically center bullet and text */
+}
+
+.task-details-modal-content ul li::before {
+content: "•"; /* Add bullet */
+color: #333; /* Bullet color */
+font-size: 18px; /* Bullet size */
+margin-right: 10px; /* Space between bullet and text */
+}
+
+.task-details-modal-content ul li a {
+text-decoration: none;
+color: #1a73e8;
+font-size: 14px;
+}
+
+.task-details-modal-content ul li a:hover {
+text-decoration: underline;
+color: #0056b3; /* Darker blue on hover */
+}
+
+/* Modal Actions */
+.task-details-modal-actions {
+display: flex;
+justify-content: center; /* Center the single button */
+margin-top: 20px;
+}
+
+.task-details-modal-actions button {
+padding: 10px 25px;
+border-radius: 5px;
+font-size: 18px;
+font-weight: bold;
+cursor: pointer;
+border: none;
+transition: background-color 0.3s ease;
+background-color: #28a745; /* Green */
+color: white;
+}
+
+.task-details-modal-actions button:hover {
+background-color: #218838; /* Darker green on hover */
+}
+
+
+
+
+/* Animation */
+@keyframes fadeIn {
+from {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+
+/* Animation */
+/* Animation */
+/* Animation */
+/* Animation */
+/* Animation */
+/* Animation */
+/* Animation */
+/* Animation */
+/* Animation */
+
+/* Container for the tabs */
+/* Modal Overlay */
+.submitmeninja-modal-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+overflow: auto;
+}
+
+/* Modal Content */
+.submitmeninja-modal-content {
+background-color: #fff;
+width: 800px; /* Increased size */
+max-width: 95%;
+max-height: 90%; /* Makes the modal scrollable if content overflows */
+border-radius: 8px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+overflow-y: auto; /* Scrollable content */
+animation: fadeIn 0.3s ease;
+position: relative;
+padding: 20px;
+}
+
+/* Modal Header */
+.submitmeninja-modal-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid #e0e0e0;
+margin-bottom: 20px;
+padding-bottom: 10px;
+}
+
+.submitmeninja-modal-header h3 {
+margin: 0;
+font-size: 20px;
+}
+
+.submitmeninja-modal-close {
+background: none;
+border: none;
+font-size: 25px;
+cursor: pointer;
+color: #ff5a5a;
+font-weight: bold;
+}
+
+
+
+
+.submitmeninja-tabs {
+display: flex;
+justify-content: space-between;
+margin-bottom: 20px;
+}
+
+.submitmeninja-tab {
+flex: .4;
+text-align: center;
+padding: 10px;
+border: 1px solid #e0e0e0;
+border-radius: 4px;
+cursor: pointer;
+background-color: #f9f9f9;
+font-weight: bold;
+transition: background-color 0.2s, color 0.2s;
+}
+
+.submitmeninja-tab.active {
+background-color: #007bff;
+color: #fff;
+}
+
+
+.submitmeninja-tab:hover {
+background-color: #9ecdff;
+color: #ffffff;
+}
+.tab-navigation-button {
+background-color: transparent;
+border: none;
+color: #007bff;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.tab-navigation-button:hover {
+color: #0056b3;
+transform: scale(1.1); /* Slightly larger on hover */
+}
+.tab-navigation-button:disabled {
+color: #a7a7a7;
+transform: scale(1.1); /* Slightly larger on hover */
+}
+
+
+/* Tab Content */
+.submitmeninja-tab-content {
+padding: 20px;
+background-color: #f9f9f9;
+border: 1px solid #e0e0e0;
+border-radius: 4px;
+font-size: 14px;
+line-height: 1.5;
+word-wrap: break-word; /* Wraps long text */
+word-break: break-word; /* Breaks long words */
+}
+.submission-time{
+font-size: 12px; /* Smaller font size for time */
+color: gray; /* Set color to gray */
+margin-top: -10px; /* Add spacing above the time */
+}
+.file-attachmentsKOKO{
+margin-top: 40px;
+}
+/* Submitted By Section */
+.submitmeninja-submitted {
+font-size: 16px;
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+.submitmeninja-time {
+font-size: 12px;
+color: #888;
+margin-left: 5px;
+vertical-align: middle;
+}
+
+/* File Attachments */
+.altask-file-section {
+margin-top: 15px;
+}
+
+.altask-file-list {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.altask-file-item {
+margin: 5px 0;
+}
+
+.altask-file-link {
+color: #007bff;
+text-decoration: none;
+font-weight: bold;
+}
+
+.altask-file-link:hover {
+text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+from {
+  opacity: 0;
+  transform: scale(0.9);
+}
+to {
+  opacity: 1;
+  transform: scale(1);
+}
+}
+.submitmeninja-comments-section {
+margin-top: 20px;
+border-top: 1px solid #e0e0e0;
+padding-top: 10px;
+}
+
+.submitmeninja-comments-list {
+margin-bottom: 10px;
+}
+
+.submitmeninja-comment {
+display: flex;
+align-items: center;
+margin-bottom: 10px;
+}
+
+.submitmeninja-comment-avatar {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+margin-right: 10px;
+}
+
+.submitmeninja-comment-content {
+background-color: #f9f9f9;
+padding: 10px;
+border-radius: 8px;
+width: 100%;
+}
+
+.submitmeninja-comment-author {
+font-weight: bold;
+margin-bottom: 5px;
+font-size: 13px;
+}
+.we-can-go-to-4{
+font-size: 13px;
+}
+
+.submitmeninja-comment-box {
+width: 90%; /* Wider to accommodate more text comfortably */
+height: 80px; /* Slightly taller for better visibility */
+resize: vertical; /* Allow vertical resizing for user preference */
+border: 1px solid #d1d1d1; /* Softer border color for a modern look */
+border-radius: 8px; /* More rounded corners for a sleek design */
+padding: 12px 15px; /* Comfortable padding for better usability */
+font-size: 15px; /* Slightly larger font for readability */
+font-family: 'Arial', sans-serif; /* Clean and modern font family */
+margin-bottom: 15px; /* More space below for separation */
+box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.05); /* Subtle inset shadow for depth */
+background-color: #fdfdfd; /* Light background for contrast */
+outline: none; /* Remove default outline */
+transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.submitmeninja-comment-box:focus {
+border-color: #007bff; /* Blue border on focus */
+box-shadow: 0px 0px 6px rgba(0, 123, 255, 0.3); /* Add focus effect with shadow */
+background-color: #ffffff; /* Pure white on focus for clarity */
+}
+
+.submitmeninja-comment-box::placeholder {
+font-size: 14px; /* Adjust placeholder font size */
+color: #b3b3b3; /* Soft gray placeholder text */
+font-style: italic; /* Distinguish placeholder text */
+}
+
+.submitmeninja-comment-submit {
+background-color: #007bff;
+color: white;
+border: none;
+padding: 10px 15px;
+border-radius: 4px;
+cursor: pointer;
+font-weight: bold;
+}
+
+.submitmeninja-comment-submit:hover {
+background-color: #0056b3;
+}
+.submitmeninja-comment-time {
+font-size: 12px;
+color: #888;
+margin-bottom: 5px;
+}
+.modalers-close-btn {
+position: absolute; /* Position it relative to the modal */
+top: 15px; /* Adjust to your preferred distance from the top */
+right: 15px; /* Adjust to your preferred distance from the right */
+background: transparent;
+border: none;
+font-size: 24px;
+font-weight: bold;
+color: #ff0000;
+cursor: pointer;
+outline: none;
+z-index: 10; /* Ensure it is above other elements */
+}
+
+.modalers-close-btn:hover {
+color: #ff1919; /* Optional hover effect */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Susz-modal-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+z-index: 100000;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.Susz-modal-content {
+background: #fff;
+border-radius: 8px;
+padding: 20px;
+max-width: 500px;
+width: 90%;
+max-height: 80vh; /* Limit the height to 80% of the viewport */
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+position: relative;
+overflow-y: auto; /* Enable vertical scrolling if content exceeds max-height */
+}
+
+.Susz-modal-close-btn {
+position: absolute;
+top: 15px;
+right: 15px;
+background: transparent;
+border: none;
+font-size: 24px;
+color: #ff0000;
+cursor: pointer;
+}
+
+.Susz-modal-close-btn:hover {
+color: #d90000;
+}
+.file-input-hidden {
+display: none;
+}
+
+.Susz-submission-textarea {
+width: 96%;
+height: 100px;
+resize: none;
+border: 1px solid #ddd;
+border-radius: 6px;
+padding: 10px;
+font-size: 14px;
+margin-bottom: 15px;
+}
+
+.Susz-submission-file-input {
+display: block;
+margin-bottom: 15px;
+}
+
+.Susz-file-preview {
+background: #f9f9f9;
+padding: 10px;
+border-radius: 6px;
+margin-bottom: 15px;
+}
+
+.Susz-file-list {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.Susz-file-item {
+font-size: 14px;
+margin-bottom: 5px;
+}
+
+.Susz-modal-actions {
+display: flex;
+justify-content:center;
+}
+
+.Susz-submit-btn,
+.Susz-cancel-btn {
+padding: 10px 20px;
+border-radius: 6px;
+font-size: 16px;
+cursor: pointer;
+border: none;
+transition: background-color 0.3s ease;
+}
+
+.Susz-submit-btn {
+background-color: #28a745;
+color: #fff;
+}
+
+.Susz-submit-btn:hover {
+background-color: #218838;
+}
+
+.Susz-cancel-btn {
+background-color: #dc3545;
+color: #fff;
+}
+
+.Susz-cancel-btn:hover {
+background-color: #c82333;
+}
+.altask-file-bt {
+display: inline-block;
+width: 91%;
+padding: 10px 20px;
+background: #f1f1f1;
+border: 1px dashed #ccc;
+border-radius: 5px;
+cursor: pointer;
+text-align: center;
+color: #666;
+font-size: 14px;
+position: relative;
+}
+
+.altask-file-bt:hover {
+background: #e1e1e1;
+}
+
+/* File upload container for layout adjustments */
+.file-upload-container {
+margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+.tablers-content {
+  display: flex;
+  flex-direction: column; /* Ensure content flows correctly */
+  padding: 10px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 250px; /* Ensures content doesn't go under the sidebar */
+ 
+  height: 100%; /* Ensure it takes up full screen height */
+}

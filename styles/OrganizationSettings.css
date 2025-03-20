@@ -1,0 +1,102 @@
+.organization-settings-content {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Makes it a column layout */
+  min-height: auto; /* Remove extra height */
+}
+
+
+.org-form-group {
+  margin-bottom: 20px;
+}
+
+.org-form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.org-form-group textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.image-upload-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  margin-top: 20px;
+}
+
+.image-container {
+  flex: 1;
+  text-align: center;
+  height: 400px;
+  margin-bottom: 80px;
+}
+.image-container img {
+  width: 100%;
+height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+}
+.default-profile-placeholderz {
+  width: 100px; /* Adjust size */
+  height: 100px;
+  background-color: rgba(240, 240, 240, 1); /* Light gray */
+  border-radius: 50%; /* Circular shape */
+  display: inline-block;
+}
+
+.default-cover-placeholderz {
+  width: 100%; /* Adjust as needed */
+  height: 100%; /* Adjust height */
+  background-color: rgba(240, 240, 240, 1); /* Light gray */
+  display: block;
+}
+
+.image-container label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+.save-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #005f47;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px; /* Ensure spacing */
+  align-self: center; /* Keep it near the content */
+}
+
+  
+.settings-container {
+  display: flex;
+  flex-grow: 1;
+}
+.settings-content {
+  flex: 1;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto; /* Enable vertical scrolling */
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 250px; /* Ensure content does not go under sidebar */
+  height: calc(100vh - 100px); 
+}

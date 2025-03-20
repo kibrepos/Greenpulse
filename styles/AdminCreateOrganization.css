@@ -1,0 +1,504 @@
+
+  .CNO-form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .CNO-form-column {
+    width: 48%;
+  }
+  
+  input[type="text"]:focus, .CNO-input-box:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .CNO-input-box {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    padding: 12px;
+  }
+
+.CNO-input {
+  width: 100%; /* Adjust the width as needed */
+  padding: 10px; /* Optional: Add padding for better appearance */
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+.CNO-textarea {
+  width: 100%;
+  height: 100px; /* Adjust the height as needed */
+  padding: 10px;
+  box-sizing: border-box;
+  resize: vertical; /* Allow vertical resizing */
+  font-family: inherit;
+  border: 1px solid #ccc; /* Lighter border color */
+}
+  
+  .CNO-input-box:hover {
+    background-color: #e6e6ff;
+  }
+  
+  .CNO-head-member-container {
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  .CNO-head-member-container:hover {
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .CNO-p-pictures {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #004612;
+  }
+  
+  .CNO-default-icon {
+    font-size: 40px;
+    color: #044d43;
+    margin-right: 15px;
+  }
+
+  .CNO-selected-members-container {
+    height: 300px; /* Adjust the height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #ddd; /* Optional: Add a border for better appearance */
+    padding: 10px; /* Optional: Add padding for better appearance */
+    margin-top: 10px; /* Optional: Add margin for spacing */
+  }
+  
+  .CNO-selected-members {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Add space between member cards */
+  }
+  
+  .CNO-selected-members, .CNO-selected-officers {
+    margin-top: 15px;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ensures a responsive grid with minimum card size */
+    gap: 10px; /* Spacing between member cards */
+}
+
+.CNO-member-info {
+    display: flex;
+    flex-direction: column; /* Stack name details vertically */
+    justify-content: center;
+    margin-left: 10px; /* Space between picture and name */
+    text-align: left; /* Ensures the text is aligned properly */
+}
+
+.CNO-member-card, .CNO-officer-card {
+  background: #ffffff; /* Light background for better contrast */
+  color: #333333; /* Darker text for readability */
+  padding: 8px 12px; /* Reduced padding for a smaller card */
+  border-radius: 8px; /* Slightly smaller rounded corners */
+  display: flex; /* Use flex to align items */
+  align-items: center;
+  max-width: 200px; /* Maximum width to prevent cards from becoming too wide */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border: 1px solid #e0e0e0; /* Light border for definition */
+  transition: all 0.3s ease; /* Smooth hover effect */
+  margin-bottom: 8px; /* Add space between cards */
+  margin-right: 8px; /* Add space between cards horizontally */
+  font-size: small;
+}
+
+.CNO-member-card:hover, .CNO-officer-card:hover {
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Add a container for the avatar and text */
+.CNO-member-card .card-content, .CNO-officer-card .card-content {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Reduced space between avatar and text */
+  width: 100%; /* Ensure content takes full width of the card */
+}
+
+/* Style for the avatar/image */
+.CNO-member-card .avatar, .CNO-officer-card .avatar {
+  width: 32px; /* Smaller avatar */
+  height: 32px; /* Smaller avatar */
+  border-radius: 50%; /* Circular avatar */
+  object-fit: cover; /* Ensure the image fits well */
+  border: 1px solid #e0e0e0; /* Light border for the avatar */
+}
+
+/* Style for the name and role */
+.CNO-member-card .info, .CNO-officer-card .info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px; /* Reduced space between name and role */
+  flex: 1; /* Allow text to take remaining space */
+  min-width: 0; /* Prevent text overflow */
+}
+
+.CNO-member-card .name, .CNO-officer-card .name {
+  font-size: 12px; /* Smaller font size for name */
+  font-weight: 600; /* Bold name */
+  color: #333333;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis for long text */
+}
+
+.CNO-member-card .role, .CNO-officer-card .role {
+  font-size: 10px; /* Smaller font size for role */
+  color: #666666; /* Lighter color for role */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis for long text */
+}
+
+.CNO-removebtn {
+  margin-left: auto; /* Align the button to the right */
+}
+  
+  .CNO-submit-btn {
+    display: block;
+    margin: 2%;
+    background-color: #0B6B57;
+    color: #fff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .CNO-submit-officer-btn {
+    margin-left: auto;
+    display: block;
+    margin: 2%;
+    background-color: #0B6B57;
+    color: #fff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .CNO-modal-body-officer ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .CNO-modal-body-officer ul li button {
+    margin-left: auto; /* Push the button to the right */
+    background-color: #0B6B57;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+
+  
+  .CNO-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.CNO-modal-content {
+    position: relative; /* To position the close icon */
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    width: 40%;
+    max-width: 600px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    max-height: 90vh; /* Ensure the modal fits within the viewport */
+    overflow-y: auto; 
+}
+
+.CNO-close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.CNO-close-icon:hover {
+    color: #ff4757; /* Change color when hovered */
+}
+
+.CNO-officer-selection {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.CNO-search-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+.CNO-dropdown {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: calc(100% - 20px);
+    background: #e9e8e8;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-height: 190px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: block; /* Dropdown will only be rendered if the search term is not empty */
+    transition: opacity 0.3s ease;
+}
+
+
+.CNO-dropdown li {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.CNO-dropdown li:hover {
+    background-color: #f0f0f0;
+}
+
+  .CNO-officer-role-input {
+    margin-top: 15px;
+  }
+  
+  .CNO-add-officer-btn {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: small;
+  }
+
+  .CNO-image-upload-container {
+    display: flex;
+    gap: 50px; /* Add space between the two input fields */
+  }
+  
+  .CNO-image-upload {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .CNO-add-officer-btn:hover {
+    background-color: #ffffff; /* Keep the background color the same */
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  li button {
+    margin-left: auto;
+    padding: 8px 12px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .CNO-modal-content h3 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-size: 1.8em;
+  }
+  
+  .CNO-officer-role-input label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .CNO-officer-role-input input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .CNO-officer-role-input input:focus {
+    border-color: #007bff;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  /* Officer Role Dropdown Container */
+.CNO-officer-role-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.CNO-officer-role-input label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Dropdown Select */
+.CNO-officer-role-input select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* Option Styling */
+.CNO-officer-role-input select option {
+  padding: 10px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Disabled Option Styling */
+.CNO-officer-role-input select option:disabled {
+  color: #999;
+  background-color: #f0f0f0;
+}
+
+.swal2-popup .swal2-loading .swal2-loader {
+  border-color: #005f47; /* Change the border color to green */
+  border-top-color: transparent; /* Keep the top border transparent for the spinning effect */
+}
+
+
+.CNO-button {
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size */
+  margin-top: 10px; /* Margin top */
+  display: inline-block; /* Display inline-block */
+  text-align: center; /* Center text */
+}
+
+.CNO-modal-body-officer {
+  max-height: 50vh; /* Adjust the height as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-top: 2%;
+}
+
+.CNO-modal-body-officer ul li:hover {
+  background-color: #f0f0f0; /* Light gray background on hover */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.CNO-modal-body {
+  max-height: 70vh; /* Adjust as needed to fit within the viewport */
+  overflow-y: auto; /* Make the modal body scrollable */
+  padding-top: 2%;
+}
+
+.CNO-modal-body ul {
+  list-style: none;
+  padding: 0;
+}
+
+.CNO-modal-body li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  border-bottom: 1px solid #ddd;
+}
+
+.CNO-modal-body li button {
+  background-color: #0B6B57;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.CNO-modal-body li button.CNO-selected-btn {
+  background-color: #989898;
+}
+
+.CNO-search-input {
+  width: 100%; /* Adjust the width as needed */
+  padding-bottom: 2%; /* Optional: Add padding for better appearance */
+  margin-bottom: 2%;
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+.CNO-button-container {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  gap: 10px; /* Add space between buttons */
+}
+
+
+.CNO-selected-officers-container {
+  height: 120px; /* Adjust the height as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+  border: 1px solid #ddd; /* Optional: Add a border for better appearance */
+  padding: 10px; /* Optional: Add padding for better appearance */
+  margin-top: 10px; /* Optional: Add margin for spacing */
+  margin-bottom:2%;
+}
+
+.CNO-selected-officers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create a grid with three columns */
+  gap: 10px; /* Add space between officer cards */
+}

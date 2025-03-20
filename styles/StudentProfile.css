@@ -1,0 +1,517 @@
+/* Container for the entire page */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+  min-height: 90vh;
+
+  overflow-y: auto;
+}
+
+/* Wrapper for the content */
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 0px;
+}
+
+/* Profile content section */
+.profile-content {
+  display: flex;
+  width: 100%;
+}
+
+/* Left side with profile info */
+.profile-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-right: 2px solid #e0e0e0;
+}
+
+/* Profile picture container */
+.profile-pic-container {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 4px solid #2e8b57; /* Green border */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensures content stays inside */
+}
+.student-profile-icon-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.student-profile-placeholder-icon {
+  font-size: 85px; /* Adjust icon size */
+  color: rgb(196, 196, 196); /* Adjust icon color */
+}
+
+
+.profile-pic-container:hover::after {
+  display: block;
+}
+
+/* Profile picture styling */
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+
+}
+
+/* Profile name styling */
+.profile-left h2 {
+  margin: 10px 0;
+  font-size: 24px;
+  color: #333333;
+}
+
+/* Horizontal line under the name */
+.profile-left hr {
+  width: 50%;
+  border: none;
+  border-top: 2px solid #2e8b57;
+  margin-bottom: 15px;
+}
+
+/* Profile info styling */
+.profile-left p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #555555;
+}
+
+/* Buttons in profile section */
+.profile-left button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #2e8b57;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.profile-left button:hover {
+  background-color: #246b45;
+}
+
+/* Right side locker section */
+.locker {
+  flex: 1;
+  padding: 20px;
+  overflow: visible; 
+}
+
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 55px;
+
+}
+
+.edit-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 55px;
+
+z-index: 999  ;
+}
+
+.modal-contents {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 50%;
+  max-width: 500px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.modal-contents h2 {
+  margin-top: 0;
+}
+
+/* Modal profile picture container */
+.modal-profile-pic {
+  width: 100px; /* Adjust as needed */
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #2e8b57; /* Green border */
+  margin: 0 auto; 
+  margin-bottom: 4%;
+}
+
+/* Center content inside the profile pic container */
+.modal-centerpic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Modal profile image */
+.modal-profile-pic-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Placeholder container */
+.modal-profile-icon-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center it properly */
+  background-color: rgb(255, 255, 255); /* Light gray */
+  border-radius: 50%;
+}
+
+/* Placeholder icon */
+.modal-profile-placeholder-icon {
+  font-size: 50px; /* Adjust icon size */
+  color: rgb(196, 196, 196); /* Adjust color */
+}
+
+
+.modal-contents label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.modal-contents input {
+  width: 95%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.modal-contents button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #05573c;
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+.modal-contents .cancelB {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #dd0000;
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+.modal-contents .cancelB:hover {
+  background-color: #8a0505;
+}
+
+.modal-contents button:hover {
+  background-color: #266a45;
+}
+/* Styles for profile picture modal */
+/* Styles for profile picture modal */
+/* Styles for profile picture modal */
+.pic-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+ 
+}
+
+div.pic-modal-content {
+  position: relative;
+  background: #fff;
+  border-radius: 2px;
+  padding: 5px;
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2); /* Red shadow */
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pic-modal-img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+button.pic-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff0000;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Styles for modal with dropdown */
+.modal-contents {
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-contents select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-top: 4px;
+}
+
+.modal-contents button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+.file-input {
+  display: none; /* Hide the default file input */
+}
+
+.file-input-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2e8b57; /* Green color */
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 20px; /* Space between button and profile picture */
+}
+
+.file-input-label:hover {
+  background-color: #247a43; /* Darker green on hover */
+}
+/* Styles for error message in the modal */
+.error {
+  color: #ff0004; /* Red color for errors */
+  background-color: #fff1f0; /* Light red background */
+  border: 1px solid #ffa39e; /* Border to make it stand out */
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.success {
+  color: #155724; /* Dark green text */
+  background-color: #d4edda; /* Light green background */
+  border: 1px solid #c3e6cb; /* Soft green border */
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+hr {
+  border: none;
+  height: 4px; /* Adjust height for thickness */
+  background-color: #2e8b57; /* Green Pulse */
+  border-radius: 5px; /* Half of the height to make it an oval */
+  width: 70%; /* Adjust width as needed */
+  margin: 0 auto; /* Center the HR */
+}
+.modal-contents textarea {
+  width: 95%; /* Full width of the modal */
+  height: 100px; /* Set a fixed height */
+  padding: 10px; /* Padding for inner spacing */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Font size for the text */
+  font-family: Arial, sans-serif; /* Font family */
+  resize: none; /* Disable resizing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Focus state for textarea */
+.modal-contents textarea:focus {
+  outline: none; /* Remove default outline */
+  border-color: #007BFF; /* Blue border on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue shadow on focus */
+}
+/* Responsive adjustments for mobile screens */
+@media screen and (max-width: 768px) {
+  /* Page container adjustments */
+  .page-container {
+    padding: 10px;
+  }
+
+  /* Content wrapper to stack items vertically */
+  .content-wrapper {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  /* Profile content section stacks vertically */
+  .profile-content {
+    flex-direction: column;
+  }
+
+  /* Profile left adjusts for smaller screens */
+  .profile-left {
+    border-right: none; /* Remove border on smaller screens */
+    padding: 10px;
+    align-items: center; /* Align content to the left */
+  }
+
+  /* Center the profile picture and buttons */
+  .profile-pic-container {
+    margin: 0 auto 20px auto;
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Adjust buttons to fit better on mobile */
+  .profile-left button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /* Locker section adjustments */
+  .locker {
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+
+  /* Adjust HR for mobile */
+  hr {
+    width: 90%;
+  }
+
+  /* Adjust profile picture modal for mobile */
+  .pic-modal-contents {
+    padding: 10px;
+  }
+
+  .pic-modal-img {
+    max-width: 100%;
+    max-height: 80vh;
+  }
+
+  /* Hide or adjust certain elements for smaller screens */
+  .profile-nameko {
+    display: none; /* Hide profile name if unnecessary */
+  }
+
+
+
+
+
+
+
+
+   .modal-contents {
+    width: 90%; /* Use 90% of the viewport width */
+    max-width: 400px; /* Set a maximum width for larger devices within mobile range */
+    padding: 10px; /* Add padding for inner spacing */
+    border-radius: 10px; /* Smooth rounded edges */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+
+  .modal-profile-pic-img {
+    width: 80px; /* Adjust the size of the profile picture */
+    height: 80px;
+  }
+
+  .modal-contents label,
+  .modal-contents input,
+  .modal-contents select {
+    font-size: 14px; /* Reduce font size */
+  }
+
+  .modal-contents button {
+    font-size: 14px; /* Adjust button font size */
+    padding: 8px; /* Reduce padding for smaller screens */
+  }
+
+  .modal-contents textarea {
+    height: 80px; /* Adjust textarea height */
+    font-size: 14px; /* Smaller text size */
+  }
+}

@@ -1,0 +1,193 @@
+/* Container Styling */
+
+  /* Title and Subtitle */
+  .oraora-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .oraora-subtitle {
+    font-size: 20px;
+    margin: 20px 0 10px;
+    color: #555;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+  }
+  
+  /* Member Item */
+  .oraoramember-item {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1.5px solid #d1d5db; /* Light gray border for visibility */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow */
+    transition: transform 0.2s, box-shadow 0.2s; /* Add hover effect */
+  }
+  
+  /* Member Info */
+  .oraoramember-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .oraoramember-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .oraoramember-name {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .oraoramember-role {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+  }
+  
+  .oraoramember-charts-container {
+    display: flex;
+    justify-content: space-between; /* Ensures equal spacing between charts */
+    align-items: flex-start; /* Aligns charts at the top */
+    gap: 20px; /* Adds space between the two charts */
+    margin-bottom: 20px; /* Adds space after the charts container */
+  }
+  
+  .oraoramember-chart-box {
+    width: 48%; /* Ensures charts fit side by side with some space */
+    padding: 15px;
+    border: 1px solid #e0e0e0; /* Adds a light border for better clarity */
+    border-radius: 8px;
+    background-color: #ffffff; /* White background for contrast */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  }
+  
+  .oraoramember-chart-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .oraoramember-divider {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0; /* Light gray for the divider */
+    margin: 30px 0; /* Adds spacing around the divider */
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+  /* Main Event List Container */
+
+  
+  /* Event List Title */
+  /* Container for both active and archived events */
+.okokok-event-list-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Individual sections for active and archived events */
+  .okokok-active-events,
+  .okokok-archived-events {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    padding: 15px;
+
+    height: 480px; /* Set a fixed height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Scrollable area for events */
+  .okokok-event-scrollable {
+    flex-grow: 1;
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-right: 10px; /* Add padding for smooth scrolling */
+    max-height: 480px; /* Limit height of scrollable content */
+  }
+  
+  /* Event item styles */
+  .okokok-event-item {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .okokok-event-item:hover {
+    background-color: #e8f4ff; /* Light blue on hover */
+  }
+  
+/* Add space between active and archived events */
+.okokok-active-events {
+    margin-bottom: 20px; /* Adds spacing below active events */
+  }
+  
+  .okokok-archived-events {
+    margin-top: 20px; /* Optional: Adds spacing above archived events */
+  }
+  
+  
+  /* Load More button */
+  .okokok-load-more {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #4caf50; /* Green */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    align-self: center;
+    transition: background-color 0.3s;
+  }
+  
+  .okokok-load-more:hover {
+    background-color: #45a045; /* Darker green */
+  }
+  .okokok-search-input {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0 20px; /* Add bottom margin to separate from items */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .okokok-search-input:focus {
+    border-color: #63df63; /* Light green for focus */
+    box-shadow: 0 0 5px rgba(99, 223, 99, 0.5);
+  }
+  

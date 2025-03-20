@@ -1,0 +1,1007 @@
+
+.event-view-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100%; /* Full height to accommodate the layout */
+}
+
+.main-content {
+    width: 80%;
+    padding: 20px;
+    background: #ffffff;
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: 100%; /* Ensure it takes full available height */
+  }
+  .left-column{
+    min-width: 70%;
+  }
+  .event-picture-section {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .event-picture {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+
+  
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    
+  }
+  
+
+
+  .event-details-card {
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+ 
+  
+  }
+  
+  
+  .event-details-left,
+  .event-details-right {
+    flex: 1;
+    max-width: 500px; /* Ensure both sides have a minimum width */
+  }
+  
+  .event-details-left h3,
+  .event-details-right h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+.event-details-left p,
+.event-details-right p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #666;
+  word-wrap: break-word; /* Ensure long words break into a new line */
+  overflow-wrap: break-word; /* Support for older browsers */
+}
+  
+  .event-details-left {
+    border-right: 1px solid #ddd;
+    padding-right: 20px;
+  }
+  
+  .event-details-right {
+    padding-left: 20px;
+  }
+  
+  .head-event-manager {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between the image and text */
+    margin-top: 15px; /* Add some spacing from the previous element */
+  }
+  
+  .profile-pics {
+    width: 45px; 
+    height: 45px;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image scales correctly */
+    border: 2px solid #ccc; /* Optional border */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  }
+  
+  
+
+  
+
+  
+  
+/* Modal Overlay */
+.attendance-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  overflow-y: auto; /* Ensure overlay is scrollable if modal is too tall */
+}
+
+.attendance-modal-content {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  height: 80vh; /* Fixed height */
+  max-height: 80vh; /* Ensure it doesn't exceed viewport height */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow-y: auto; /* Make content scrollable */
+  text-align: center;
+  animation: fadeIn 0.3s ease-out;
+  position: relative; /* For positioning the close button */
+}
+
+
+.profile-picture-container {
+  position: relative;
+  width: 45px; /* Adjust size as needed */
+  height: 45px; /* Adjust size as needed */
+  display: flex; /* Enable Flexbox */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  margin: 0 auto; /* Center within its parent container */
+}
+
+.profile-picture-containers{
+  position: relative;
+  width: 45px; /* Adjust size as needed */
+  height: 45px; /* Adjust size as needed */
+  display: flex; /* Enable Flexbox */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  margin: 0 1%;
+}
+.profile-iconqz {
+  width: 100%;
+  height: 100%;
+  color: #ccc; /* Default icon color */
+  border-radius: 50%; /* Make it circular */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hidden {
+  display: none; /* Hide the fallback icon by default */
+}
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ff0000;
+}
+
+.close-button:hover {
+  color: #ff4141;
+}
+
+/* Modal Title */
+.attendance-modal-content h3 {
+  font-size: 1.5rem;
+  color: #333333;
+  margin-bottom: 1.5rem;
+}
+
+/* Table Styling */
+.attendance-modal-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.attendance-modal-content th,
+.attendance-modal-content td {
+  text-align: center;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+}
+
+.attendance-modal-content th {
+  background-color: #f4f4f4;
+  color: #555;
+  font-weight: bold;
+}
+
+.attendance-modal-content td {
+  color: #666;
+}
+
+/* Status Buttons Container */
+.status-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Individual Status Button */
+.status-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: gray; /* Default button background */
+  border: none; /* Remove button borders */
+}
+
+/* Icon Styling */
+.custom-icon {
+  color: white; /* Default icon color */
+  font-size: 20px;
+}
+
+/* Hover Effects */
+.status-button:hover {
+  transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+/* Active State for Buttons */
+.status-button.present.active {
+  background-color: #63df63; /* Green for Present */
+}
+
+.status-button.late.active {
+  background-color: #efaf6f; /* Orange for Late */
+}
+
+.status-button.absent.active {
+  background-color: #ff8282; /* Red for Absent */
+}
+
+.status-button.inactive {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  color: gray;
+  cursor: not-allowed;
+}
+
+.archived-tag {
+  font-size: 0.8em;
+  font-weight: normal;
+  color: gray;
+  margin-left: 10px;
+}
+
+
+/* Modal Actions */
+.modal-actionszxc {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.modal-actionszxc button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.modal-actionszxc button:hover {
+  transform: scale(1.05);
+}
+
+/* Cancel Button */
+.modal-actionszxc button:first-child {
+  background-color: #e74c3c;
+  color: white;
+}
+
+
+
+/* Save Button */
+.modal-actionszxc button:last-child {
+  background-color: #2ecc71;
+  color: white;
+}
+
+
+
+
+
+
+  /* Container for the event forum */
+.event-forum {
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+  overflow-y: hidden;
+}
+
+/* Title of the forum section */
+.event-forum h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Container for all messages */
+.forum-messages {
+  max-height: 500px;
+  height: 500px;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Individual message wrapper */
+.forum-message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+/* Message on the right (current user) */
+.message-right {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+/* Message on the left (other users) */
+.message-left {
+  flex-direction: row;
+  text-align: left;
+}
+
+/* Profile picture */
+.profile-picko {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+
+  object-fit: cover;
+
+}
+
+/* Message content wrapper */
+.message-content {
+  max-width: 70%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Message text */
+.message-text {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+
+.message-file {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.message-attachment {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.message-attachment:hover {
+  transform: scale(1.05);
+}
+
+.attachment-link {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.attachment-link:hover {
+  background-color: #0056b3;
+}
+
+
+.message-author {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* Timestamp */
+.message-time {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 5px;
+}
+
+/* Input form */
+.forum-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Input field */
+.forum-input input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.2s;
+}
+
+.forum-input input:focus {
+  border-color: #007bff;
+}
+
+/* Send button */
+.forum-input button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.forum-input button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style for the button */
+/* Style for the button */
+.view-rsvp-responses-button {
+  margin-left: 55px; /* Pushes the button to the right */
+  margin-bottom: 20px; /* Adds space at the bottom of the button */
+  background-color: #3498db; /* Primary color */
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-align: center; /* Ensures text is centered */
+}
+
+/* Hover effect */
+.view-rsvp-responses-button:hover {
+  background-color: #2980b9; /* Darker shade of blue */
+
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhance the shadow */
+}
+
+
+
+
+.rsvp-responses-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  overflow-y: auto; /* Ensure the overlay itself is scrollable if needed */
+}
+
+.rsvp-responses-modal-content {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  height: 70vh; /* Fixed height */
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-out;
+  position: relative; /* For positioning the close button */
+  overflow-y: auto; /* Make the content scrollable */
+}
+
+/* Modal Header */
+.rsvp-responses-modal-content h3 {
+  font-size: 1.5rem;
+  color: #333333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Table Wrapper */
+.rsvp-responses-table-wrapper {
+  flex: 1;
+  overflow-y: auto; /* Enable scrolling for the table */
+  max-height: 70vh; /* Adjust the height to make the table scrollable */
+  border: 1px solid #ddd; /* Add a subtle border around the table wrapper */
+  border-radius: 5px;
+}
+
+/* Table */
+.rsvp-responses-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rsvp-responses-table th,
+.rsvp-responses-table td {
+  text-align: center;
+  padding: 0.5rem; /* Reduced padding for smaller rows */
+  border: 1px solid #ddd;
+}
+
+.rsvp-responses-table th {
+  background-color: #f4f4f4;
+  color: #555;
+  font-weight: bold;
+  font-size: 0.9rem; /* Slightly smaller font size */
+}
+
+.rsvp-responses-table td {
+  color: #666;
+  font-size: 0.85rem; /* Slightly smaller font size */
+}
+
+/* Actions */
+.rsvp-responses-modal-actions {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.rsvp-responses-modal-actions button {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9rem; /* Slightly smaller font size */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #db3434; /* Primary button color */
+  color: #ffffff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.rsvp-responses-modal-actions button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Profile Picture */
+.profile-pickoa {
+  width: 45px; /* Reduced size for smaller table rows */
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+/* Base RSVP Status Styling */
+.rsvp-status {
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Specific Status Colors */
+.rsvp-status.attending {
+  color: #ffffff;
+  background-color: #27ae60; /* Green for Attending */
+}
+
+.rsvp-status.not-attending {
+  color: #ffffff;
+  background-color: #e74c3c; /* Red for Not Attending */
+}
+
+.rsvp-status.maybe {
+  color: #ffffff;
+  background-color: #f39c12; /* Orange for Maybe */
+}
+
+.rsvp-status.no-response {
+  color: #ffffff;
+  background-color: #7f8c8d; /* Gray for No Response */
+}
+
+
+
+
+.single-day-event,
+.multi-day-event {
+  font-family: Arial, sans-serif;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.date {
+  color: gray; /* Gray color for dates */
+  font-weight: normal; /* Remove bold from dates */
+}
+
+.time {
+  font-style: italic;
+  color: #16a085; /* Keep time green */
+}
+
+.day-label {
+  font-weight: bold;
+  margin-right: 5px;
+  color: #34495e; /* Darker color for Day labels */
+}
+
+.single-day-event span,
+.multi-day-event span {
+  margin-right: 5px;
+}
+
+
+
+
+
+
+
+/* Flex container for aligning cards */
+.card-container {
+  display: flex; /* Enable flex layout */
+  flex-direction: column; /* Stack cards vertically */
+  justify-content: flex-start; /* Align items to the top */
+  align-items: flex-end; /* Align items to the right */
+  margin-top: 16px; /* Add some spacing at the top */
+}
+
+/* Styling for each card */
+.card-left, .card-right {
+  background-color: #ffffff; /* Light background for the cards */
+ 
+  border-radius: 8px; /* Rounded corners */
+  padding: 16px; /* Space inside the cards */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 300px; /* Fixed width for the cards */
+  margin-bottom: 16px; /* Space between the cards */
+}
+
+/* Headers inside cards */
+.card-left h3, .card-right h3 {
+  font-size: 1..2rem; /* Larger font size for headers */
+  color: #333; /* Darker color for headers */
+  margin-bottom: 12px; /* Add space below headers */
+}
+
+/* Buttons inside cards */
+.card-left button, .card-right button {
+  background-color: #007bff; /* Blue button background */
+  color: white; /* White text */
+  border: none; /* Remove borders */
+  padding: 8px 16px; /* Add padding */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 0.9rem; /* Adjust font size */
+  margin-top: 8px; /* Add some spacing above buttons */
+}
+
+/* Button hover effect */
+.card-left button:hover, .card-right button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.attendance-day {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Day Text */
+.attendance-day span {
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Buttons */
+.action-button {
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.upload-button {
+  background-color: #28a745; /* Green */
+  color: #ffffff;
+}
+
+.upload-button:hover {
+  background-color: #218838;
+}
+
+.view-button {
+  background-color: #007bff; /* Blue */
+  color: #ffffff;
+}
+
+.view-button:hover {
+  background-color: #0056b3;
+}
+
+/* Inactive Text for Disabled Days */
+.inactive-text {
+  font-size: 0.9rem;
+  color: #999;
+  margin: 0;
+}
+
+
+/* Container for RSVP */
+.rsvp-single-day,
+.rsvp-day {
+  margin: 5px 0; /* Reduced margin */
+  font-size: 0.9rem; /* Smaller font size */
+  font-weight: bold;
+}
+
+/* Specific style for the status label */
+.rsvp-status-label {
+  display: inline-block;
+  padding: 5px 15px; /* Padding to match the button-like appearance */
+  border-radius: 20px; /* Fully rounded edges */
+  text-align: center;
+  font-size: 0.85rem; /* Adjusted font size */
+  font-weight: bold;
+  color: white; /* Default text color for statuses */
+}
+
+/* Colors for each status */
+.rsvp-status-label.no-response {
+  background-color: gray;
+}
+
+.rsvp-status-label.attending {
+  background-color: green;
+}
+
+.rsvp-status-label.maybe {
+  background-color: rgb(255, 153, 0);
+  
+}
+
+.rsvp-status-label.not-attending {
+  background-color: red;
+}
+
+
+
+
+/* Modal Overlay */
+.EVXD-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.EVXD-modal-content {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Header */
+.EVXD-modal-content h3 {
+  font-size: 1.5rem;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+
+/* Table */
+.EVXD-modal-content table {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-collapse: collapse;
+}
+
+.EVXD-modal-content th,
+.EVXD-modal-content td {
+  text-align: left;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+}
+
+.EVXD-modal-content th {
+  background-color: #f4f4f4;
+  color: #555;
+  font-weight: bold;
+}
+
+.EVXD-modal-content td {
+  color: #666;
+}
+
+.EVXD-modal-content select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Buttons */
+.EVXD-cancel-button,
+.EVXD-save-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.EVXD-cancel-button {
+  background-color: #e74c3c;
+  color: #ffffff;
+  margin-right: 1rem;
+}
+
+.EVXD-cancel-button:hover {
+  background-color: #c0392b;
+}
+
+.EVXD-save-button {
+  background-color: #2ecc71;
+  color: #ffffff;
+}
+
+.EVXD-save-button:hover {
+  background-color: #27ae60;
+}
+
+
+
+.event-details-cardz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.qr-code-container {
+  display: flex;
+  gap: 20px; /* Space between QR code and the right-side content */
+  align-items: center;
+  justify-content: flex-start; /* Align to the left */
+}
+
+.qr-code-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.qr-code-section h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.qr-code-rightside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.qr-code-link {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width:400px; /* Constrain the link to a reasonable width */
+}
+
+.qr-code-input {
+  display: flex;
+  gap: 10px;
+  width: 100%; /* Ensures input and button are responsive */
+}
+
+.qr-code-input input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.qr-code-input button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+

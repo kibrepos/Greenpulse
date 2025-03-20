@@ -1,0 +1,547 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* General Styles */
+html,body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* Logo Section */
+.logo-section {
+    flex: 1.3;
+    background-color: #0B6B57;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo-section h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    color: white;
+    font-weight: 700;
+}
+
+.green {
+    color: #48A144;
+}
+
+.pulse {
+    color: white;
+    margin-left: 5px;
+    position: relative;
+}
+
+
+
+/* Login Section */
+.login-section {
+    flex: 0.7;
+    background-color: white;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+    color: #0B6B57;
+    font-weight: 700;
+}
+
+.input-groupz {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.input-groupz label {
+    display: block;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+.input-groupz input {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 2px solid #0B6B57;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    outline: none;
+}
+
+.input-groupz input:focus {
+    border-bottom: 2px solid #48A144;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 10px;
+    color: #555;
+}
+
+.login-btn {
+    background-color: #0B6B57;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 50%;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.extra-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: #0B6B57;
+}
+
+.extra-links a {
+    color: #0B6B57;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.extra-links a:hover {
+    text-decoration: underline;
+}
+
+.admin-login {
+    text-align: right;
+}
+
+.errors {
+    color: #ff0004; /* Red color for errors */
+    background-color: #fff1f0; /* Light red background */
+    border: 1px solid #ffa39e; /* Border to make it stand out */
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box; /* Ensures padding is included in the element's width and height */
+    text-align: left; /* Centers the text inside the error box */
+    margin-bottom: -30px;
+  }
+
+
+
+
+/* Green Confirm Button */
+.swal-confirm-green {
+    background-color: rgb(0, 70, 58) !important; /* Green */
+    color: white !important;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .swal-confirm-green:hover {
+    background-color: rgb(1, 54, 45) !important; /* Darker Green */
+  }
+  
+  /* Gray Cancel Button (Optional) */
+  .swal-cancel-gray {
+    background-color: #6c757d !important; /* Gray */
+    color: white !important;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .swal-cancel-gray:hover {
+    background-color: #5a6268 !important; /* Darker Gray */
+  }
+  
+.swal2-actions {
+    gap: 10px !important; /* Adjust the gap value as needed */
+    justify-content: center; /* Ensure buttons are centered */
+  }
+  
+
+.signup-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Sign Up Section */
+.signup-section {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.signup-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #0B6B57;
+    font-weight: 700;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.form-row .input-group {
+    flex: 1;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.8rem;
+    color: #555;
+    margin-bottom: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 5px 0;
+    border: none;
+    border-bottom: 2px solid #0B6B57;
+    font-size: 0.8rem;
+    font-family: 'Open Sans', sans-serif;
+    outline: none;
+    color: #333;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-bottom: 2px solid #48A144;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 5px;
+    color: #555;
+}
+
+.signup-btn {
+    background-color: #0B6B57;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.signup-btn:hover {
+    background-color: #0B6B57;
+}
+
+.extra-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+.extra-links a {
+    color: #0B6B57;
+    text-decoration: none;
+}
+
+.extra-links a:hover {
+    text-decoration: underline;
+}
+
+/* Logo Section */
+.logo-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #0B6B57 0%, #ffffff 100%);
+}
+
+.logo-section h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    color: white;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+.green {
+    color: #0B6B57;
+}
+/* Modal overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Modal content */
+  .modal {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: fadeIn 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Modal title */
+  .modal h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  /* Modal message */
+  .modal p {
+    margin: 15px 0;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Button container */
+  .button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  /* Button styling */
+  .modal button {
+    background: #045015;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .modal button:hover {
+    background: #218838;
+  }
+  
+  .modal button:focus {
+    outline: none;
+  }
+  .errorsz {
+    color: #ff0004; /* Red color for errors */
+    background-color: #fff1f0; /* Light red background */
+    border: 1px solid #ffa39e; /* Border to make it stand out */
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    position: absolute; /* Position the error message absolutely */
+    top: 6%; /* Position it below the last form element */
+    left: 0;
+    width: 30%; /* Ensure it spans the width of the form */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin-left: 42px;
+    margin-top: 20px;
+  }
+
+/* Mobile Styles for Login Section */
+@media screen and (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+    }
+
+    .logo-section {
+        display: none;
+    }
+
+    .login-section {
+        flex: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px; /* Larger padding for the login section */
+        box-sizing: border-box;
+        gap: 25px; /* Increased spacing between elements */
+    }
+
+    .login-section h2 {
+        font-size: 3.5rem; /* Larger font size for the title */
+        text-align: center;
+        margin-bottom: 40px; /* More space below the title */
+    }
+
+    .input-groupz {
+        width: 95%; /* Wider input fields */
+        max-width: 500px; /* Increased max width */
+        margin-bottom: 20px; /* More space between inputs */
+    }
+
+    .input-groupz input {
+        width: 100%;
+        font-size: 1.3rem; /* Bigger input text size */
+        padding: 14px; /* More padding for input fields */
+    }
+
+    .login-btn {
+     
+        display:block;
+        width: 100%;
+        margin-top: 35px;
+    }
+
+    .extra-links {
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+    }
+    
+    .extra-links a {
+        display: block; /* Make each link appear on a new line */
+        margin: 10px 0; /* Add spacing between links */
+    }
+    
+
+    .errorsz {
+        width: 90%;
+        margin: 15px auto;
+        text-align: center;
+        font-size: 1rem; /* Adjusted error message font size */
+    }
+    .signup-container {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+    }
+
+    .logo-section {
+        display: none;
+    }
+
+    .signup-section {
+        flex: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+        gap: 15px; /* Regular spacing for signup section */
+    }
+
+    .signup-section h2 {
+        font-size: 2.5rem; /* Slightly smaller than login */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .input-group {
+        width: 100%;
+        max-width: 400px; /* Keep a moderate max width */
+        margin-bottom: 15px;
+    }
+
+    .input-group input,
+    .input-group select {
+        width: 80%;
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+
+    .signup-btn {
+        width: 100%;
+        max-width: 400px; /* Smaller button size than login */
+        font-size: 1.2rem;
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    .extra-links {
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+        margin-top: 15px;
+    }
+
+    .extra-links a {
+        display: inline-block;
+        margin: 5px 0;
+    }
+
+    .errorsz {
+        width: 90%;
+        margin: 10px auto;
+        text-align: center;
+        font-size: 0.9rem; /* Slightly smaller error text */
+    }
+}

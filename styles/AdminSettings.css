@@ -1,0 +1,191 @@
+/* Main profile section */
+.admin-profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #023024; /* Dark background */
+    border-radius: 8px;
+    margin: 10px auto;
+    max-width: 1000px;
+    color: rgb(0, 0, 0);
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile picture container */
+.profile-picture-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.edit-profile-picture {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: #242526; /* Dark background for edit icon */
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Profile name and buttons */
+.admin-details {
+    flex-grow: 1;
+    margin-left: 10px; /* Pushes the text a bit further from the image */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers the text */
+}
+
+.admin-details h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+}
+
+
+.admin-details p {
+    color: #B0B3B8;
+    font-size: 14px;
+}
+
+
+
+.profile-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 30px; /* Move the buttons upwards */
+    right: 20px;
+}
+
+.edit-profile-btn,
+.change-password-btn {
+    background-color: #f8f9fa; /* Facebook blue color */
+    color: #023024;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-profile-btn:hover,
+.change-password-btn:hover {
+    background-color: #e2e6ea;
+}
+
+
+/* Modal overlay for edit profile */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #242526; /* Dark modal background */
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h3 {
+    margin-top: 0;
+}
+
+/* File input and image preview */
+.profile-picture-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.profile-preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid white;
+}
+
+.file-input-label {
+    display: inline-block;
+    padding: 10px;
+    background-color: #2374E1;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.file-input-label:hover {
+    background-color: #185abc;
+}
+
+/* Form actions */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.cancel-btn {
+    background-color: #DC3545;
+}
+
+.cancel-btn:hover {
+    background-color: #C82333;
+}
+
+/* Error and success messages */
+.success-message {
+    color: #28A745;
+    margin-top: 10px;
+}
+
+.error-message {
+    color: #DC3545;
+    margin-top: 10px;
+}
+
+/* Password strength indicator */
+.strength-indicator.too-weak {
+    color: red;
+}
+
+.strength-indicator.moderate {
+    color: orange;
+}
+
+.strength-indicator.strong {
+    color: green;
+}

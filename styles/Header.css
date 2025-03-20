@@ -1,0 +1,684 @@
+/* Header container */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #0B6B57; 
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  max-height: 40px;
+}
+
+/* Profile Name Styling */
+.profile-nameko {
+  font-size: 1rem; /* Adjust the font size */
+  
+  color: #ffffff; /* Dark color for text */
+  text-align: center; /* Center-align the name */
+  margin-top: 10px; /* Add space above */
+  margin-bottom: 10px; /* Add space below */
+  margin-right: 10px;
+  font-family: 'Arial', sans-serif; /* Clean and modern font */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+
+
+.header-left .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+/* Right section of the header containing icons and profile */
+.header-right {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  gap: 5px;
+}
+
+/* Icons (Notifications, Messages) */
+.icon {
+  margin-right: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Profile section */
+.profile {
+
+  cursor: pointer;
+}
+
+.profile-icon {
+  width: 35px; /* Set the fixed width */
+  height: 35px; /* Set the fixed height */
+  border-radius: 50%; /* Make it a perfect circle */
+  object-fit: cover; /* Ensure the image fits within the circle */
+  border: 2px solid rgb(255, 255, 255); /* Optional: Add a border for better aesthetics */
+  background-color: #cccccc; /* Fallback background color when no image is available */
+  display: flex; /* Aligns placeholder text when no image */
+  align-items: center; /* Vertically centers placeholder text */
+  justify-content: center; /* Horizontally centers placeholder text */
+  font-size: 1rem; /* Size for placeholder initials */
+  color: white; /* Placeholder text color */
+  font-weight: bold; /* Make placeholder text bold */
+}
+.profile-icon-placeholder {
+  width: 35px; /* Set the fixed width */
+  height: 35px; /* Set the fixed height */
+  border-radius: 50%; /* Make it a perfect circle */
+  object-fit: cover; /* Ensure the image fits within the circle */
+  border: 2px solid white; /* Optional: Add a border for better aesthetics */
+  background-color: #cccccc; /* Fallback background color when no image is available */
+  display: flex; /* Aligns placeholder text when no image */
+  align-items: center; /* Vertically centers placeholder text */
+  justify-content: center; /* Horizontally centers placeholder text */
+  font-size: 1rem; /* Size for placeholder initials */
+  color: white; /* Placeholder text color */
+  font-weight: bold; 
+}
+
+.profile-placeholder-icon {
+  color: #fff; /* Icon color */
+  font-size: x-large; /* Adjust as needed */
+}
+
+
+
+/* Dropdown menu styling */
+.header-dropdown {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background-color: white;
+  color: #333;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 150px;
+  display: block; /* Ensure it's always block when shown */
+}
+
+.header-dropdown ul {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.header-dropdown ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.header-dropdown ul li:last-child {
+  border-bottom: none;
+}
+
+.header-dropdown ul li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Ensure the dropdown stays open when hovered */
+.profile:hover .header-dropdown,
+.header-dropdown:hover {
+  display: block;
+}
+
+/* Notification Icon with Badge */
+.notification-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Red Badge Styling */
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Notification List */
+.notification-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Notification Item */.notification-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.notification-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: white;
+  transition: background-color 0.2s;
+  
+}
+
+.notification-item:hover {
+  background-color: #f9f9f9;
+}
+
+/* Notifications Dropdown */
+.notifications-dropdown {
+  position: absolute;
+  top: 55px;
+  right: 200px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: black;
+  width: 450px;
+  max-height: 400px;
+  overflow-y: auto;
+  border-radius: 8px;
+  padding: 10px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Notification List Inside Dropdown */
+.notifications-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1; /* Ensures it takes up available space */
+  overflow-y: auto;
+}
+
+/* Individual Notification Items */
+.notifications-dropdown li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.notifications-dropdown li.unread {
+  background-color: #f0f0f0;
+}
+
+.notifications-dropdown li.read {
+  background-color: #fff;
+}
+
+/* Read Icon */
+.mark-read-icon {
+  float: right;
+  color: green;
+}
+
+
+
+.notification-avatar {
+  position: relative;
+  width: 40px; /* Adjust as needed */
+  height: 40px; /* Adjust as needed */
+  border-radius: 50%; /* Circular avatar */
+  overflow: hidden; /* Ensure the image stays within the container */
+}
+
+.notification-profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image fits well */
+  position: absolute; /* Position the image above the placeholder */
+  top: 0;
+  left: 0;
+}
+
+.notification-avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* Circular placeholder */
+  background-color: #ccc; /* Plain gray background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute; /* Position the placeholder behind the image */
+  top: 0;
+  left: 0;
+}
+
+.notification-avatar-placeholder.hidden {
+  display: none; /* Hide the placeholder by default */
+}
+
+.notification-placeholder-icon {
+  color: #fff; /* Icon color */
+  font-size: 50px; /* Adjust as needed */
+}
+/* Notification Text */
+.notification-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #535353;
+  text-overflow:ellipsis;
+}
+
+.notification-title {
+  font-size: 15px;
+  margin: 0;
+  color: #333;
+}
+
+.notification-timestamp {
+  font-size: 12px;
+  color: #999;
+  margin-top: 5px;
+}
+
+/* Actions for Notifications */
+.notification-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.accept-btn,
+.deny-btn {
+  padding: 5px 10px; /* Keep existing padding */
+  width: 70px; /* Set a fixed width */
+  height: 30px; /* Set a fixed height */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  display: block; /* Stack buttons vertically */
+  text-align: center; /* Align text to the left */
+  margin: 5px 0; /* Add some space between buttons */
+}
+
+
+.accept-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.deny-btn {
+  background-color: #f44336;
+  color: white;
+}
+.accept-btn:hover {
+  background-color: #45a049; /* Darker green */
+}
+
+.deny-btn:hover {
+  background-color: #e53935; /* Darker red */
+}
+
+
+/* Sticky Notification Button Container */
+.notification-button-container {
+  position: sticky;
+  bottom: 0;
+  background-color: white;
+  padding: 10px;
+  border-top: 1px solid #f0f0f0;
+  text-align: left;
+}
+
+/* Delete All Styled as a Link */
+.notification-action-btn {
+  color: #4caf50;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+}
+
+.notification-action-btn:hover {
+  text-decoration: underline;
+}
+/* Notification Modal Overlay */
+.notification-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Notification Modal Content */
+.notification-modal-content {
+  background-color: #fff;
+  border-radius: 10px;
+  max-width: 50%;
+  width: 50%;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  word-wrap: break-word;
+  max-height: 70%;
+  overflow-y: auto; /* Enables horizontal scrolling */
+
+}
+
+
+/* Close Button */
+.notification-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #ff0000;
+  transition: color 0.3s ease;
+}
+
+.notification-modal-close:hover {
+  color: #333;
+}
+
+/* Modal Header */
+.notification-modal-header {
+  font-size: large;
+  font-weight: bold;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Modal Timestamp */
+.notification-modal-timestamp {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+
+.notification-inside-modal-placeholder {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgba(240, 240, 240, 1); /* Light gray */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+/* Placeholder icon */
+.notification-inside-modal-placeholder-icon {
+  font-size: 24px; /* Adjust size */
+  color: rgb(150, 150, 150); /* Adjust color */
+}
+/* Modal Sender Info */
+.notification-modal-sender {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  
+}
+
+.notification-modal-sender img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.notification-modal-sender-name {
+  font-weight: bold;
+  font-size: large;
+}
+.notification-modal-sender-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px; /* Minimal gap between sender's name and organization */
+}
+
+/* Modal Content */
+.notification-modal-body {
+  font-size: medium;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+
+
+
+
+/* Action Button Container */
+.notification-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+/* Updated Styles for Notification Modal */
+.notification-modal-file-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f5f5f5; /* Light grey background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.notification-modal-file-link {
+  font-size: 16px;
+  color: #333; /* Darker color */
+  text-decoration: none; /* Remove underline */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.notification-modal-file-link:hover {
+  color: #0056b3; /* Slightly darker color on hover */
+}
+
+.notification-modal-file-icon {
+  font-size: 20px;
+  color: #666;
+}
+
+.notification-modal-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.notification-modal-btn.accept {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.notification-modal-btn.decline {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.notification-modal-btn:hover {
+  opacity: 0.9;
+}
+
+
+
+
+/* Styles for the notification modal video */
+.notification-modal-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.notification-modal-image {
+  max-width: 100%;
+  max-height: 400px; /* Adjust to control the maximum height */
+  border-radius: 8px;
+  object-fit: cover; /* Ensures the image scales properly */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Video Container Styling */
+.notification-modal-video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.notification-modal-video {
+  width: 100%;
+  max-width: 100%;
+  max-height: 450px; /* Adjust to control the maximum height */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  object-fit: contain; /* Ensures the video maintains its aspect ratio */
+}
+
+.notification-modal-body a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.notification-modal-body a:hover {
+  color: darkblue;
+
+}.notification-modal-organization {
+  font-size: 0.9rem;
+  color: #878888;
+  margin-top: 0px;
+}
+.mobile-menu-btn {
+  display: none; /* Hide by default */
+}
+/* Responsive Header for Mobile Screens */
+    @media screen and (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .header-left .logo {
+    font-size: 1.2em; /* Reduce font size for smaller screens */
+  margin-left: 15px;
+  }
+
+  .header-right {
+    flex-direction: row-reverse; /* Keep profile and menu accessible */
+    gap: 10px;
+  }
+
+  .icon {
+    margin-right: 10px; /* Reduce spacing for icons */
+  }
+    .profile {
+    display: none; /* Hide profile section on mobile */
+  }
+
+  .profile-nameko {
+    display: none; /* Hide username on mobile */
+  }
+
+  .profile-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Mobile Menu Button */
+  .mobile-menu-btn {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    padding: 5px;
+  }
+
+  /* Hide desktop menu by default */
+  .header-dropdown {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    width: 150px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  /* Show dropdown when active */
+  .header-dropdown.show {
+    display: block;
+  }
+
+  /* Adjust notification dropdown for mobile */
+  .notifications-dropdown {
+    right: 10px;
+    width: 90%;
+    max-width: 350px;
+  }
+}
+.notification-sender-avatar {
+  position: relative;
+  width: 40px; /* Adjust as needed */
+  height: 40px; /* Adjust as needed */
+
+  margin-right: 2%;
+}
+
+
+.notification-sender-placeholder {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%; /* Circular placeholder */
+  background-color: #ccc; /* Plain gray background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute; /* Position the placeholder behind the image */
+  top: 0;
+  left: 0;
+}
+
+.notification-sender-placeholder.hidden {
+  display: none; /* Hide the placeholder by default */
+}
+
+.notification-placeholder-icon {
+  color: #fff; /* Icon color */
+  font-size: 24px; /* Adjust as needed */
+}

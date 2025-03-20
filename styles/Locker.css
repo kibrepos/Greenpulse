@@ -1,0 +1,499 @@
+/* Locker.css */
+
+/* General styles */
+.locker-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f8f8f8;
+    height: 75vh; /* Full viewport height */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Ensures that the contents stack properly */
+    position: relative; /* Establish a positioning context */
+    
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px; /* Increased padding for better spacing */
+    overflow: hidden;
+    background-color: #ffffff; /* White background for the header */
+    text-align: right; 
+    width: 100%;
+    
+}
+
+/* Styles for h2 elements inside locker-container */
+.locker-container h2 {
+    font-size: 1.5rem; /* Adjust the font size */
+    color: #000000; /* Green color matching the theme */
+    font-weight: bold; /* Ensure the title stands out */
+    margin: 0; /* Remove default margin */
+    padding: 10px 0; /* Add some padding for spacing */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+    text-align: center;
+}
+.head h2 {
+    font-size: 0.9rem; /* Slightly smaller font size */
+    color: #388E3C; /* Darker green for contrast */
+    font-weight: normal; /* Make it not bold */
+    margin: 0; /* Remove default margin */
+    padding: 5px 0; /* Add some padding for spacing */
+    letter-spacing: 1px; /* Add spacing between letters */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; 
+    direction: rtl; 
+    text-align: left; /* Align text to the left for RTL */
+    max-width: 100%; /* Ensure it doesn't exceed the parent width */
+}
+
+/* Center the message and style it */
+.no-files-message {
+    text-align: center; /* Center text horizontally */
+    color: #bebebe; /* Gray color for the text */
+    font-size: 15px; /* Adjust font size as needed */
+    
+    margin: 80px 130px; /* Add vertical margin */
+    padding: 10px; /* Add padding around the text */
+    
+    
+}
+
+
+.controls {
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* Dropdown menu styling */
+.dropdown {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background-color: white;
+    color: #333;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+    width: 150px;
+    display: block; /* Ensure it's always block when shown */
+  }
+  
+  .dropdown ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  .dropdown ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
+  .dropdown ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdown ul li:hover {
+    background-color: #f0f0f0;
+  }
+
+
+
+
+.controls {
+    display: flex;
+    align-items: center;
+}
+
+.controls .icon-group {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.controls .icon {
+    font-size: 24px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.controls .go-back-icon {
+    color: red;
+}
+
+
+.attach-file-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.attach-file-button .icon {
+    margin-right: 40px;
+}
+.controls .create-folder-icon {
+    color: #4A4A2A; /* Green color for the create folder icon */
+}
+
+.controls .attach-file-icon {
+    color: #4682B4; /* Blue color for the attach file icon */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.search-container {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.search-container .faSearch {
+    color: #007bff;
+}
+
+.file-list {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 800px; /* Set a fixed height for the container */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds max height */
+   padding-bottom: 9rem;
+    box-sizing: border-box; /* Ensure padding and border are included in the container's total width and height */
+    position: relative; /* Ensure child elements are positioned relative to this container */
+ 
+}
+
+
+.file-item, .folder-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 10px;
+    padding: 10px;
+    width: calc(52% - 40px); 
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: visible; /* Changed from hidden to visible */
+    
+}
+
+.folder-item:hover, .file-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    
+}
+.file-name,.folder-name {
+    flex: 1; /* Allow file name to grow and fill space */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; 
+    margin-right: 10px;
+}
+.ellipsis{
+    font-size: 24px;
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: 24px; /* Adjust icon size as needed */
+}
+
+.file-icon {
+    color: #6c757d; /* Default color for file icons */
+}
+
+.folder-icon {
+    color: #ffd86b; /* Color for folder icons */
+}
+
+/* Specific icon colors */
+.image-icon { color: #ff5722; } /* Orange */
+.video-icon { color: #03a9f4; } /* Blue */
+.text-icon { color: #009688; } /* Teal */
+.pdf-icon { color: #d32f2f; } /* Red */
+.word-icon { color: #1e88e5; } /* Blue */
+.powerpoint-icon { color: #d84315; } /* Deep Orange */
+.other-icon { color: #9e9e9e; } /* Grey */
+
+
+
+
+
+/* Modal Styles */
+.video-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+
+.video-modal-content {
+    background: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    position: relative;
+    max-width: 80vw;
+  
+}
+
+.video-modal-video {
+    width: 100%;
+    max-height: 80vh;
+
+}
+
+.video-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+}
+
+/* Loading State Styles */
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid white;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #444;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 6px;
+    width: 0;
+    background-color: #4caf50;
+    transition: width 0.4s ease;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Apply a semi-transparent overlay and center drop area */
+/* Apply a semi-transparent overlay and center drop area */
+.locker-container {
+    position: relative;
+}
+
+/* Styling for when dragging is happening */
+.locker-container.dragging .drop-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Ensure it overlays all content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    z-index: 1000; 
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    pointer-events: none; /* Ensure drag-and-drop area does not interfere with other actions */
+}
+
+/* Drop area styling */
+.drop-area {
+    display: none; /* Hidden by default */
+}
+
+/* Show drop area when dragging files */
+.drop-area.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Position it at the center of the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+
+    pointer-events: none; /* Prevent interaction with the overlay */
+}
+
+/* Styling for drag lines across the viewport */
+.locker-container.dragging::before,
+.locker-container.dragging::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed rgba(255, 255, 255, 0.7); /* Dashed lines */
+    pointer-events: none; /* Ensure it does not capture any mouse events */
+
+}
+
+/* Create lines across the viewport */
+.locker-container.dragging::before {
+    border-top: 2px dashed rgba(255, 255, 255, 0.7);
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.7);
+}
+
+.locker-container.dragging::after {
+    border-left: 2px dashed rgba(255, 255, 255, 0.7);
+    border-right: 2px dashed rgba(255, 255, 255, 0.7);
+}
+
+.swal-left-align {
+    text-align: left; /* Align text to the left */
+
+  }
+  
+
+
+/* Responsive Design for Locker */
+
+/* For small devices (tablets and smartphones) */
+@media screen and (max-width: 768px) {
+    
+
+  
+    .file-item, .folder-item {
+
+      min-width: 93%;
+      padding: 10px;
+    
+
+    }
+  
+  
+  
+    .dropdown {
+      width: 120px; /* Reduce dropdown width */
+    }
+  
+    .search-container {
+      margin-bottom: 10px; /* Adjust margin for spacing */
+      display: flex;
+      align-items: center;
+      justify-content: center; /* Center the search bar */
+    }
+  
+    .search-container input {
+      width: 80%; /* Reduce input width */
+      font-size: 14px; /* Adjust font size */
+    }
+  
+    .video-modal-content, .pic-modal-content {
+      max-width: 90%; /* Adjust modal width for smaller screens */
+      max-height: 80%; /* Adjust modal height for smaller screens */
+    }
+  
+    .video-modal-video, .pic-modal-img {
+      max-width: 100%;
+      max-height: 60vh; /* Restrict height for smaller screens */
+    }
+  
+    .loading {
+      padding: 10px; /* Reduce padding for loading modal */
+    }
+  
+    .loading .spinner {
+      width: 30px; /* Reduce spinner size */
+      height: 30px;
+    }
+  
+    .loading .upload-text {
+      font-size: 14px; /* Adjust font size */
+    }
+  
+    .modal-content {
+      width: 90%; /* Reduce modal width for smaller devices */
+      padding: 10px; /* Add padding for spacing */
+    }
+  
+    .modal-content button {
+      font-size: 14px; /* Adjust button font size */
+      padding: 8px 12px; /* Adjust padding */
+    }
+  
+    .drop-area {
+      font-size: 18px; /* Reduce font size for drop area */
+    }
+  }
+  

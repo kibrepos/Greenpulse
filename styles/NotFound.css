@@ -1,0 +1,59 @@
+/* Main container for NotFound page */
+.not-found-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f0fdf4; /* Light green background */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+  
+  /* Box for error content */
+  .not-found-box {
+    background-color: white; /* White background for the box */
+    padding: 40px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 90%; /* Responsive width */
+    max-width: 500px; /* Max width for larger screens */
+  }
+  
+  /* Error title */
+  .not-found-title {
+    font-size: 2.5rem;
+    color: #0B6B57; /* Green color for error title */
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Error description */
+  .not-found-description {
+    font-size: 1.2rem;
+    color: #4b5563; /* Neutral gray for text */
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  /* Back button */
+  .not-found-back-button {
+    background-color: #0B6B57; /* Green background */
+    color: white; /* White text */
+    padding: 12px 24px; /* Add padding for a larger button */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Hover effect for the button */
+  .not-found-back-button:hover {
+    background-color: #09522b; /* Slightly darker green */
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  

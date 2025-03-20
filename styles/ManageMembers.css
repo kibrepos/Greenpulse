@@ -1,0 +1,351 @@
+/* Main content area */
+.MM-main-content {
+  padding: 20px;
+  overflow-y: auto;
+  height: calc(100vh - 60px); /* Adjust height to account for header */
+  margin-left: 250px; /* Aligning with sidebar width */
+}
+
+/* Table Wrapper */
+
+
+/* Table Styles */
+.MM-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+
+}
+
+/* Header Styles */
+.MM-table thead th {
+  background-color: #004d40;
+  color: white;
+  padding: 12px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* Row Styles */
+.MM-table tbody tr {
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s;
+}
+
+/* Hover Effect */
+.MM-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Cell Styles */
+.MM-table td {
+  padding: 12px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Profile Picture */
+.member-profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.default-profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background-color: #ffffff; /* Dark green */
+  color: #ccc;
+}
+
+/* Action Button */
+.MM-action-btn {
+  background-color: #00796b;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s;
+}
+
+.MM-action-btn:hover {
+  background-color: #004d40;
+}
+/* Dropdown Menu */
+.MM-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content */
+.MM-dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px; /* More rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Softer shadow */
+  z-index: 10;
+  width: 120px; /* Ensure proper width */
+  padding: 8px 0;
+  overflow: hidden;
+}
+
+/* Show dropdown when open */
+.MM-dropdown.open .MM-dropdown-content {
+  display: block;
+}
+
+/* Dropdown Items */
+.MM-dropdown-content a {
+  display: block;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #000;
+  font-weight: bold;
+}
+
+/* First Item Styling */
+.MM-dropdown-content a:first-child {
+  padding: 10px 16px;
+  font-weight: bold;
+}
+
+
+
+.MM-dropdown-content button {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.MM-dropdown-content button:hover {
+  background-color: #e8effd; /* Light blue hover effect */
+  color: #0066ff; /* Matching blue text */
+  font-weight: bold;
+  border-radius: 4px; /* Slight rounding */
+}
+
+/* Table Title */
+.MM-table-wrapper h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+
+  padding-bottom: 5px;
+}
+
+
+
+.invite-btn {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.invite-btn:hover {
+  background-color: #45a049; /* Darker Green */
+}
+
+
+
+
+
+
+
+
+
+/* Modal Overlay */
+.MM-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.MM-modal-content {
+  position: relative;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 800px; /* Adjust width as needed */
+  max-width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Search Bar */
+.MM-search-bar {
+  width: 98%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Modal Sections */
+.invite-modal-sections {
+  display: flex;
+  gap: 20px;
+  height: 400px; /* Adjust height as needed */
+}
+
+.students-to-invite,
+.invited-students {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.students-to-invite h4,
+.invited-students h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Scrollable Student List */
+.student-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto; /* Enable vertical scrolling */
+  flex: 1; /* Fill remaining height */
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background: #f9f9f9;
+}
+
+.student-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #eee; /* Add a border between items */
+}
+
+.student-item:last-child {
+  border-bottom: none; /* Remove border for the last item */
+}
+
+.student-item:hover {
+  background: #f1f1f1;
+}
+/* Profile Picture */
+
+/* Buttons */
+.student-item button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.student-item button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Invite Button */
+.student-item button.invite-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.student-item button.invite-btn:hover {
+  background-color: #45a049;
+}
+
+/* Cancel Invite Button */
+.student-item button.cancel-btn {
+  background-color: #d33;
+  color: white;
+}
+
+.student-item button.cancel-btn:hover {
+  background-color: #c12e2e;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #ff0000;
+  padding: 5px;
+}
+
+.close-btn:hover {
+  color: #ff3232;
+}
+.profile-wrapper {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2%;
+}
+
+.MM-student-profile-pic {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block; /* Ensure the image is visible by default */
+}
+
+
+
+.MM-profile-icon {
+  font-size: 20px;
+  color: #ccc;
+  border-radius: 50%;
+  background-color: #feffff;
+  width: 40px;
+  height: 40px;
+}
+.swal2-select {
+  width: 85%;
+  padding: 8px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}

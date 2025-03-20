@@ -1,0 +1,176 @@
+/* Main sidebar container */
+.student-sidebar {
+    width: 250px;
+    background-color: #ffffff; /* White background */
+    color: white;
+    
+    padding: 0;
+    position: fixed;
+    top: 56px; /* Adjust for header height */
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    z-index: 99;
+    height: 100vh;
+    /* Add overflow behavior */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    transform: translateX(-100%); /* Initially hide the sidebar */
+    transition: transform 0.3s ease; /* Smooth transition for toggle */
+}
+
+.student-sidebar.active {
+    transform: translateX(0); /* Show sidebar when active */
+}
+
+/* Cover Image */
+.student-sidebar-cover-image {
+    width: 100%;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+}
+
+/* Profile image styling */
+.profile-image-wrapper {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.student-sidebar-profile-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #ffffff;
+}
+
+
+
+/* Organization name styling */
+.student-sidebar-organization-name {
+    text-align: center;
+    font-size: large;
+    margin: 30px 0 10px; /* Adjusted margin for spacing */
+    color: #000000; /* Black text */
+    position: relative;
+ 
+}
+
+.student-sidebar-organization-name::after {
+    content: "";
+    display: block;
+    width: 90%; /* Underline width */
+    height: 1px;
+    background-color: #bdbdbd; /* Teal underline */
+    margin: 0 auto; /* Center the underline */
+    margin-top: 5px;
+    border-radius: 50px;
+}
+
+/* Navigation links */
+.student-sidebar-nav {
+    width: 100%;
+    height: 100%;
+}
+
+.student-sidebar-navlink {
+    text-decoration: none;
+    color: #000000; /* Light color for inactive links */
+    font-size: medium;
+    padding: 10px 20px;
+    width: 78%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.student-sidebar-navlink:hover {
+    background-color: #0B6B57;
+    color: #ffffff; 
+}
+
+.student-sidebar-navlink .svg-inline--fa {
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+
+.student-active-link {
+    background-color: #0B6B57; 
+    color: #ffffff;
+    font-weight: bold;
+    position: relative;
+}
+
+.student-active-link::before {
+    content: "";
+    position: absolute;
+    right: -15px;
+    top: 0;
+    height: 100%;
+    width: 6px;
+    background-color: #0B6B57;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+/* Spacing between nav items */
+.student-sidebar-navlink + .student-sidebar-navlink {
+    margin-top: 9px;
+}
+
+/* Toggle button for mobile */
+.sidebar-toggle-button {
+    position: fixed;
+    top: 64px; /* Adjust based on header height */
+    left: 10px;
+    z-index: 10000;
+    background: #0B6B57; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-toggle-button:hover {
+    background: #00796b; /* Slightly darker green on hover */
+}
+.default-profile-placeholder {
+ 
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #ffffff;
+        background-color: #cccccc;
+    
+    
+  }
+  
+
+/* Ensure sidebar is always visible on larger screens */
+@media (min-width: 768px) {
+    .student-sidebar {
+        transform: translateX(0); /* Always visible on desktop */
+    }
+
+    .sidebar-toggle-button {
+        display: none; /* Hide toggle button on desktop */
+    }
+}

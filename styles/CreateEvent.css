@@ -1,0 +1,224 @@
+
+.CCC-create-event-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.CCC-create-event-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Spread left and right sections */
+  gap: 20px;
+}
+
+.CCC-form-left,
+.CCC-form-right {
+  width: 48%;
+}
+
+.CCC-create-event-form-group {
+  margin-bottom: 15px;
+}
+
+.CCC-create-event-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.CCC-create-event-input,
+.CCC-create-event-textarea {
+  width: 97%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #f9f9f9;
+}
+.CCC-dropdown-toggle
+{
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #f9f9f9;
+}
+.CCC-create-event-textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.CCC-date-time-group {
+  margin-bottom: 15px;
+}
+
+.CCC-add-date-btn,
+.CCC-remove-date-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.CCC-add-date-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+}
+
+.CCC-remove-date-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+}
+
+.CCC-image-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.CCC-uploaded-image {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.CCC-buttons {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  gap: 10px; /* Add some space between the buttons */
+  margin-top: 20px; /* Ensure proper spacing above the buttons */
+}
+
+.CCC-cancel-btn,
+.CCC-create-event-submit-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.CCC-cancel-btn {
+  background-color: #ffffff; /* White background for cancel button */
+  color: rgb(255, 0, 0); /* Red text color */
+
+
+
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+
+.CCC-create-event-submit-btn {
+    background-color: #28a745; /* Green color for create button */
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+/* Modal Overlay */
+.CCC-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it overlays everything */
+}
+
+/* Modal Content */
+.CCC-modal-content {
+  background-color: #fff; /* White background */
+  border-radius: 10px;
+  width: 90%; /* Responsive width */
+  max-width: 500px; /* Limit width on larger screens */
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  position: relative; /* For close button positioning */
+  text-align: center; /* Center-align text content */
+}
+
+/* Dropdown Item Styling */
+.CCC-dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd; /* Light border for separation */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.CCC-dropdown-item:hover {
+  background-color: #f5f5f5; /* Light gray on hover */
+}
+
+/* Profile Picture Styling */
+.CCC-dropdown-profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px; /* Space between image and text */
+}
+
+/* Close Modal Button */
+.CCC-close-modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #999; /* Gray color for the button */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.CCC-close-modal-btn:hover {
+  color: #333; /* Darker color on hover */
+}
+
+/* Modal Header */
+.CCC-modal-content h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+.FESTANOBRAZIL {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  width: 97%;
+
+  /* Allow height to grow dynamically */
+ height: 78vh;
+  /* Scroll behavior if content overflows */
+  overflow-y: auto; /* Enables vertical scrolling if needed */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  scrollbar-width: thin; /* Optional: thinner scrollbars */
+  scrollbar-color: #ccc #f9f9f9; /* Optional: custom scrollbar color */
+}

@@ -1,0 +1,283 @@
+
+.admin-dashboard-content {
+  background-color: #ffffff;
+}
+
+.VW-return-button {
+  padding: 10px 20px;
+  background-color: #0088cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.VW-return-button:hover {
+  background-color: #006699;
+}
+
+.VW-admin-dashboard {
+  height: 100vh; /* Full viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.VW-org-cover {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  background-color: #e6e9ec;
+  border-radius: 8px 8px 0 0;
+}
+
+.VW-org-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -60px;
+}
+
+.VW-org-profile-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: -30px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.VW-org-profile {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #d9d9d9;
+  border: 4px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: -20px;
+}
+
+.VW-org-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  padding-left: 20px;
+}
+
+.VW-org-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.VW-edit-button {
+  padding: 10px 20px;
+  background-color: #0088cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.VW-edit-button:hover {
+  background-color: #006699;
+}
+
+.VW-org-details {
+  margin-top: 20px;
+  padding: 15px 20px;
+  background-color: #f2f4f8;
+  border-radius: 8px;
+  max-width: 100%;
+  text-align: left;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Organization Header Styling */
+.VW-org-cover {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  background-color: #e6e9ec;
+  border-radius: 8px 8px 0 0;
+}
+
+.VW-org-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -60px;
+}
+
+.VW-org-profile-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: -30px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.VW-org-profile {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #d9d9d9;
+  border: 4px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.VW-org-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  padding-left: 20px;
+}
+
+.VW-org-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.VW-edit-button {
+  padding: 10px 20px;
+  background-color: #0088cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.VW-edit-button:hover {
+  background-color: #006699;
+}
+
+.VW-org-details {
+  margin-top: 20px;
+  padding: 15px 20px;
+  background-color: #f2f4f8;
+  border-radius: 8px;
+  max-width: 100%;
+  text-align: left;
+  font-size: 16px;
+  color: #555;
+}
+
+
+/* Profile Sections */
+.VW-member-profile, .VW-faculty-adviser {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: flex-start;
+}
+
+
+.VW-org-details {
+  margin-top: 20px;
+  padding: 15px 20px;
+  background-color: #f2f4f8;
+  border-radius: 8px;
+  max-width: 100%;
+  text-align: left;
+  font-size: 16px;
+  color: #555;
+}
+.VW-member-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.role-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Officers & Members grid layout */
+.profile-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: flex-start;
+}
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(25% - 20px); /* Adjust to 4 cards per row */
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card img {
+  width: 50px; /* Smaller image */
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.profile-card p {
+  margin: 5px 0;
+  font-size: 0.9rem; /* Smaller font size */
+}
+
+.profile-card .role-title {
+  margin-top: 10px;
+  font-size: 1rem; /* Smaller font size */
+}
+.VW-default-icon {
+  font-size: 60px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .profile-card {
+    width: 100%;
+  }
+
+  .VW-org-profile {
+    width: 100px;
+    height: 100px;
+  }
+
+  .VW-edit-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .VW-org-name {
+    font-size: 20px;
+  }
+
+  .VW-org-details p {
+    font-size: 15px;
+  }
+}

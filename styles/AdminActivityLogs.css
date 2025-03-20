@@ -1,0 +1,120 @@
+/* General layout for Activity Logs page */
+.admin-activity-logs {
+  display: flex;
+  height: 100vh; /* Full viewport height for consistency */
+}
+
+/* Activity logs content wrapper */
+.activity-logs-content {
+  flex-grow: 1;
+  margin-left: 300px;
+  padding: 20px;
+  background-color: #f4f7f9;
+  transition: margin-left 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.collapsed + .activity-logs-content {
+  margin-left: 60px;
+}
+
+/* Heading for Activity Logs */
+.activity-logs-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Make the logs section scrollable */
+.logs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  overflow-y: auto; /* Enables vertical scrolling */
+height: 75vh;
+  margin-bottom: 20px;
+}
+
+/* Each log entry */
+.log-item {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  
+  border: 1px solid #ddd;
+  flex-direction: column;
+  gap: 5px;
+
+}
+
+
+
+/* Name of the user/admin at the top */
+.log-user-name {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Activity description text */
+.log-item p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Timestamp of the activity at the end */
+.log-timestamp {
+  font-size: 0.9rem;
+  color: #888;
+  margin-left: 10px;
+}
+
+/* Search and filter form */
+.search-filter-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-filter-form input {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  flex-grow: 1;
+}
+
+.search-filter-form button {
+  padding: 8px 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Load more button */
+.adminactivitylogs-load-more-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.adminactivitylogs-load-more-btn[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

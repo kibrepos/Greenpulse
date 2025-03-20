@@ -1,0 +1,168 @@
+/* Admin Events Management Styles */
+.admin-dashboard {
+  display: flex;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.admin-dashboard-content {
+  flex: 1;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.organization-section {
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.org-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.org-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.events-container {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.event-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+min-width: 20%;
+max-width: 21%;
+border: 2px solid #28a745;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.event-card:hover {
+
+ 
+  border-color: #26e252; /* Darker green */
+}
+.event-title {
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  display: block;
+ 
+}
+
+
+.event-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+
+}
+
+.view-all-events {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.view-all-events:hover {
+  text-decoration: underline;
+}
+.admin-iscroll {
+  height: 77vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f5f5f5;
+}.org-logo-placeholder {
+  width: 50px; /* Adjust the size */
+  height: 50px;
+  background-color: gray;
+  border-radius: 50%; /* Makes it circular */
+}
+
+
+
+
+
+
+
+
+
+
+/*ALL EVENTS PART*/
+.event-status {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.event-status-upcoming {
+  background-color: #fff3cd; /* Yellow background for "soon" */
+  color: #856404; /* Dark yellow text */
+}
+
+.event-status-ongoing {
+  background-color: #d1ecf1; /* Blue background for "ongoing" */
+  color: #0c5460; /* Dark blue text */
+}
+
+.event-status-completed {
+  background-color: #d4edda; /* Green background for "completed" */
+  color: #155724; /* Dark green text */
+}
+
+.event-status-cancelled {
+  background-color: #f8d7da; /* Red background for "cancelled" */
+  color: #721c24; /* Dark red text */
+}
+.events-table-container {
+  max-height: 76vh; /* Adjust the height as needed */
+  overflow-y: auto; /* Enables vertical scrolling */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+
+  padding: 10px; /* Optional: Adds spacing inside the container */
+}
+.view-event-button {
+  background-color: transparent;
+  color: #007bff;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: small;
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Hover Effect */
+.view-event-button:hover {
+  background-color: #007bff; /* Blue background on hover */
+  color: #fff; /* White text */
+  border-color: #007bff; /* Slightly darker blue border */
+}

@@ -1,0 +1,115 @@
+.OAC-organization-dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+
+
+.OAC-activity-logs-content {
+  flex-grow: 1; /* Take up remaining space */
+  display: flex;
+  margin-left: 250px;
+  flex-direction: column;
+  overflow-y: auto; /* Enable scrolling if content overflows */
+  padding: 16px; /* Add padding for spacing */
+  background-color: white;
+}
+
+  
+  .OAC-logs-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    flex-grow: 1; /* Allow the logs list to grow */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Disable horizontal scrolling */
+  }
+  
+  
+  .OAC-log-item {
+    border: 1px solid #ccc; /* Border around each log item */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding inside each log item */
+    margin-bottom: 10px; /* Space between log items */
+    background-color: #f9f9f9; /* Light background color */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items in a column */
+    justify-content: space-between; /* Space out child items */
+    min-height: 100px; /* Set a fixed height */
+  }
+  
+  .OAC-log-user-name {
+    align-self: flex-start; /* Align user name to the right */
+    font-weight: bold; /* Bold text */
+  }
+  
+  .OAC-log-timestamp {
+    align-self: flex-start; /* Align timestamp to the right */
+    font-size: 0.9em; /* Slightly smaller font */
+    color: #888; /* Gray color for the timestamp */
+  }
+  
+  .OAC-log-message {
+    text-align: left;
+    margin: 10px 0;
+    font-size: 1em;
+    color: #333;
+    flex-grow: 1;
+    word-wrap: break-word; /* Ensure long words break */
+    overflow-wrap: break-word; /* Ensure words break */
+    max-width: 60%; /* Adjust this to the desired width */
+    white-space: pre-line; /* Preserve spaces but allow line breaks */
+    text-overflow: ellipsis; /* Add ellipsis when text overflows */
+  }
+  
+  .load-more-wrapper {
+    text-align: center; /* Center the button horizontally */
+    margin-top: 16px; /* Add some spacing above the button */
+  }
+  
+  .load-more-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  .load-more-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+
+  
+  .OAC-load-more-button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  .OAC-load-more-wrapper {
+    padding: 10px; /* Add some padding */
+    text-align: center; /* Center the button */
+    background: #f0f0f0; /* Optional: add a background to the button area */
+  }
+  .deleted-files-container ul li {
+    margin-bottom: 5px; /* Adds some spacing between the list items */
+    white-space: nowrap; /* Prevents filenames from wrapping */
+    overflow: hidden; /* Hide anything that exceeds the set width */
+    text-overflow: ellipsis; /* Adds ellipsis when filenames are too long */
+    max-width: 90%; /* Adjust the width of the filename before it breaks */
+  }
+  
+  .deleted-files-container p {
+    margin: 10px 0;
+   
+    font-size: 1em;
+    color: #333;
+  }
+  .OAC-log-message-container {
+    margin-left: 400px; /* Remove any extra margin to align with the green bar */
+    margin-right: auto; /* Keep it centered (optional) */
+    width: 100%; /* Make sure it takes the full available width */
+    display: block; /* Ensure it behaves like a block element */
+  }

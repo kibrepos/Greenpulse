@@ -1,0 +1,11 @@
+.admin-dashboard {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .admin-dashboard-main {
+    display: flex;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+ 

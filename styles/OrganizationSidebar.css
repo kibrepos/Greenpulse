@@ -1,0 +1,158 @@
+/* Main sidebar container */
+.student-sidebar {
+    width: 250px;
+    background-color: #ffffff; /* White background */
+    color: black;
+    height: 100vh;
+    padding: 0;
+    position: fixed;
+    top: 56px; /* Adjust for your header height */
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Cover Image */
+.student-sidebar-cover-image {
+    width: 100%;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-color: #34495e; /* Placeholder background */
+}
+
+/* Profile Image Styling */
+.profile-image-wrapper {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.student-sidebar-profile-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #ecf0f1; /* Light border */
+}
+
+.default-profile-icon {
+    font-size: 60px;
+    color: #bdc3c7; /* Light gray icon */
+    border: 4px solid #ecf0f1; /* Light border */
+    border-radius: 50%;
+}
+
+/* Organization Name Styling */
+.student-sidebar-organization-name {
+    text-align: center;
+    font-size: 21px;
+    margin: 50px 0 5px; /* Adjusted for better spacing */
+    color: #000000; /* Black text */
+    position: relative;
+    padding-bottom: 5px; /* Space for underline */
+}
+
+.student-sidebar-organization-name::after {
+    content: "";
+    display: block;
+    width: 90%; /* Underline width */
+    height: 1px;
+    background-color: #bdbdbd; /* Gray underline */
+    margin: 0 auto;
+    margin-top: 5px;
+    border-radius: 50px;
+}
+
+/* User Role Styling */
+/* User Role Styling */
+.user-role {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: #009688; /* Teal background for better visibility */
+    color: #ffffff !important; /* Force white text for contrast */
+    padding: 8px 15px;
+    border-radius: 12px;
+    display: inline-block;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: auto;
+    max-width: 90%; /* Ensure it fits within the sidebar */
+    overflow-wrap: break-word; /* Ensure long text wraps */
+}
+
+
+/* Role-specific colors */
+.user-role-member {
+    background-color: #373737; /* Light green */
+    color: #2e7d32; /* Dark green text */
+}
+
+.user-role-officer {
+    background-color: #313131; /* Light orange */
+    color: #ef6c00; /* Dark orange text */
+}
+
+.user-role-president {
+    background-color: #573338; /* Light red */
+    color: #c62828; /* Dark red text */
+}
+
+/* Navigation Links */
+.student-sidebar-nav {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.student-sidebar-navlink {
+    text-decoration: none;
+    color: #333333; /* Dark gray for inactive links */
+    font-size: 16px;
+    padding: 12px 25px;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.student-sidebar-navlink:hover {
+    background-color: #009688;
+    color: #ffffff; /* White text on hover */
+}
+
+.student-sidebar-navlink .svg-inline--fa {
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+/* Active Link Styling */
+.student-active-link {
+    background-color: #009688; /* Teal background for active link */
+    color: #ffffff;
+    font-weight: bold;
+    position: relative;
+}
+
+.student-active-link::before {
+    content: "";
+    position: absolute;
+    right: -15px;
+    top: 0;
+    height: 100%;
+    width: 6px;
+    background-color: #009688;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+/* Spacing between Nav Items */
+.student-sidebar-navlink + .student-sidebar-navlink {
+    margin-top: 9px;
+}

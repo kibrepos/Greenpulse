@@ -1,0 +1,626 @@
+.organization-announcements-page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #f5f5f5;
+  }
+  
+  .organization-announcements-container {
+    display: flex;
+    flex-grow: 1;
+  }
+  .organization-announcements-content {
+    flex: 1;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Enable vertical scrolling */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 250px; /* Ensure content does not go under sidebar */
+    height: calc(100vh - 100px); 
+}
+
+/* For smaller screens, reduce the margin and height dynamically */
+@media screen and (max-width: 768px) {
+    .organization-announcements-content {
+        margin-left: 0; /* Remove extra margin on small screens */
+        height: calc(100vh - 20px); /* Adjust for smaller heights */
+    }
+}
+
+/* Handle very small screens (mobile) */
+@media screen and (max-width: 480px) {
+    .organization-announcements-content {
+        padding: 10px;
+        height: calc(100vh - 10px); /* Maximize visible area on small screens */
+    }
+}
+
+
+  
+  .organization-announcements-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  /* Modal Container */
+  .organization-announcements-modal-container {
+    background-color: #fff;
+    padding: 30px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Modal Header */
+  .organization-announcements-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .organization-announcements-modal-header h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .organization-announcements-modal-close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .organization-announcements-modal-close-button:hover {
+    color: #333;
+  }
+  
+  /* Form Styling */
+  .organization-announcements-announcement-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .organization-announcements-form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .organization-announcements-form-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .organization-announcements-form-group input,
+  .organization-announcements-form-group textarea,
+  .organization-announcements-form-group select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: border-color 0.2s ease-in-out;
+  }
+  
+  .organization-announcements-form-group input:focus,
+  .organization-announcements-form-group textarea:focus,
+  .organization-announcements-form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* File Upload */
+  .organization-announcements-form-group input[type="file"] {
+    padding: 5px;
+  }
+  
+  /* Submit Button */
+  .organization-announcements-send-announcement-button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .organization-announcements-send-announcement-button:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  .organization-announcements-create-announcement-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.2s;
+  }
+  
+  .organization-announcements-create-announcement-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Filters Section */
+  .organization-announcements-filters-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .organization-announcements-filters-section select,
+  .organization-announcements-filters-section input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  .organization-announcements-apply-button {
+    background-color: #055238;
+    color:white; /* Green text */
+ 
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: -2px;
+  }
+  .organization-announcements-apply-button:hover {
+    background-color: #067e22; /* Green background on hover */
+    color: rgb(238, 237, 237); /* White text on hover */
+  }
+  .organization-announcements-reset-button {
+    background-color: transparent ;
+    color: rgb(255, 0, 0);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: -2px;
+  }
+  
+  .organization-announcements-reset-button:hover {
+    color: #c62828;
+  }
+  .organization-announcements-delete-button {
+    background-color: transparent;
+    color: #ff0000;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.2s;
+    margin-top: -2px;
+  }
+  
+  .organization-announcements-delete-button:disabled {
+    background-color: transparent;
+    color: #888;
+    cursor: not-allowed;
+  }
+  
+  .organization-announcements-table input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  /* Table Styling */
+  .organization-announcements-table {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+   
+  }
+  
+  .organization-announcements-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+  }
+  
+  .organization-announcements-row:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .organization-announcements-date {
+    margin-left: 40px;
+    width: 100%;
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .organization-announcements-details {
+    width: 60%;
+    padding: 0 15px;
+  }
+  
+  .organization-announcements-details h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+  }
+  .loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+  }
+  .orgy-announcy-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .orgy-announcy-content {
+    background-color: #fff;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80vh; /* Limit height of modal */
+    border-radius: 10px;
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    position: relative;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Scrollbar styling for better aesthetics */
+  .orgy-announcy-content::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .orgy-announcy-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  .orgy-announcy-content::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+  }
+  
+  .orgy-announcy-content::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  .orgy-announcy-file-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #ececec; /* Light grey background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  
+  /* General file icon style */
+  .orgy-announcy-file-icon {
+    font-size: 24px;
+    color: #555;
+  }
+  
+  .orgy-announcy-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  .orgy-announcy-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .orgy-announcy-profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .orgy-announcy-sender-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .orgy-announcy-subject {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .orgy-announcy-timestamp {
+    font-size: 14px;
+    color: gray;
+    margin-top: 10px;
+  }
+  
+  .orgy-announcy-message {
+    margin-top: 20px;
+    white-space: pre-wrap;
+  }
+  
+  .orgy-announcy-image {
+    margin-top: 20px;
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .orgy-announcy-video {
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 8px;
+  }
+  .orgy-announcy-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .orgy-announcy-image {
+    max-width: 100%;
+    max-height: 400px; /* Adjust this to control the height */
+    border-radius: 8px;
+    object-fit: cover; /* Ensures the image scales properly */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Container for the video */
+  .orgy-announcy-video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .orgy-announcy-video {
+    width: 100%;
+    max-width: 100%;
+    max-height: 450px; /* Adjust this to control the height */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .orgy-announcy-file-link {
+    font-size: 16px;
+    color: #333; /* Darker color */
+    text-decoration: none; /* Remove underline */
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  .orgy-announcy-file-link:hover {
+    color: #0056b3; /* Slightly darker color on hover */
+  }
+  
+  .loading-spinner {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #015e3a;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .organization-announcements-details p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .organization-announcements-details-button {
+    background-color: white;
+    color: #4c9bf0; /* Green text */
+    border: 2px solid #4c9bf0; /* Green border */
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: -2px;
+  }
+  
+  .organization-announcements-details-button:hover {
+    background-color: #4c9bf0;
+    color:white
+  }
+  .organization-announcements-table {
+    max-height: 79%;
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    padding: 10px;
+  
+   
+    margin-top: 20px;
+  }
+  
+  /* Optional: Hide scrollbar for a cleaner look */
+  .organization-announcements-table::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .organization-announcements-table::-webkit-scrollbar-thumb {
+    background-color: #055238;
+    border-radius: 10px;
+  }
+  
+  .organization-announcements-table::-webkit-scrollbar-thumb:hover {
+    background-color: #03753c;
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .organization-announcements-filters-section {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+    }
+  
+    .organization-announcements-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .organization-announcements-date,
+    .organization-announcements-details {
+      width: 100%;
+    }
+  }
+
+  .pagination-controls {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.pagination-controls li {
+    display: inline-block;
+}
+
+.pagination-controls a {
+    display: block;
+    padding: 8px 12px;
+    border: 2px solid #055238; /* Match button border color */
+    border-radius: 5px;
+    text-decoration: none;
+    color: #055238; /* Match button text color */
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background-color: white; /* Keep consistency with other buttons */
+}
+
+.pagination-controls a:hover {
+    background-color: #0f9065; /* Match hover effect */
+    border: 2px solid #0f9065; /* Match button border color */
+    color: white;
+}
+
+.pagination-controls .active a {
+    background-color: #055238; /* Active state */
+    color: white;
+    font-weight: bold;
+}
+
+.pagination-controls .disabled a {
+    color: #ccc;
+    border-color: #ccc;
+    pointer-events: none;
+}
+
+
+
+
+
+
+.notification-modal-profile-container {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+
+  align-items: center;
+  justify-content: center;
+  background-color: #cccccc; /* Light background for the placeholder */
+}
+
+
+.notification-modal-profile-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-modal-profile-placeholder-hidden {
+  display: none; /* Hide the placeholder if the image is valid */
+}
+
+.notification-modal-profile-placeholder-icon {
+  width: 24px;
+  height: 24px;
+  color: #ffffff; /* Gray color for the icon */
+}
+
+.notification-modal-sender-info {
+  margin-left: 10px;
+}
+
+.notification-modal-organization {
+  font-size: 14px;
+  color: #666;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile Optimization */
+@media screen and (max-width: 768px) {
+    .pagination-controls {
+        flex-wrap: wrap;
+    }
+
+    .pagination-controls a {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+}

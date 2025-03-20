@@ -1,0 +1,288 @@
+
+ 
+.wazzapbruh-student-profile-pic {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    align-self: flex-start;
+    margin-top: 5px;
+    border: 2px solid #0B6B57; 
+}
+  
+.wazzapbruh-feedback-item {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+
+    align-items: flex-start;
+    border: 1px solid #ddd;
+}
+.wazzapbruh-student-info {
+    display: flex;
+    align-items: center; /* Align items in one row */
+    gap: 8px; /* Space between name and timestamp */
+    flex-wrap: wrap; /* Prevents overflow issues */
+}
+  
+.pagination-info {
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+  }
+.wazzapbruh-student-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.wazzapbruh-feedback-timestamp {
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.wazzapbruh-feedback-list-container {
+height: 75vh;
+  overflow-y: auto; /* Enable vertical scrolling */
+
+}
+  
+  .wazzapbruh-feedback-message {
+    margin-top: 10px; /* Adds spacing between timestamp and message */
+  }
+.wazzapbruh-feedback-actions {
+    display: flex;
+    gap: 8px; /* Adds spacing between buttons */
+    margin-left: auto; /* Pushes the buttons to the right */
+  }
+
+.wazzapbruh-reply-btn,
+.wazzapbruh-view-replies-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.wazzapbruh-reply-btn:hover,
+.wazzapbruh-view-replies-btn:hover {
+    background-color: #0056b3;
+}
+
+.wazzapbruh-view-replies-btn {
+    background-color: #0056b3;
+}
+
+.wazzapbruh-view-replies-btn:hover {
+    background-color: #003f7f;
+}
+
+.wazzapbruh-pagination-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.wazzapbruh-active {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.wazzapbruh-disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+/* Modal Overlay */
+.wazzup-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+  }
+  
+  /* Modal Content */
+  .wazzup-modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    max-width: 90%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Input and Textarea */
+  .wazzup-modal-input,
+  .wazzup-modal-textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .wazzup-modal-textarea {
+    height: 150px;
+    resize: vertical;
+  }
+  
+  /* Buttons */
+  .wazzup-modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .wazzup-modal-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .wazzup-modal-buttons button:first-child {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .wazzup-modal-buttons button:last-child {
+    background-color: #ccc;
+    color: black;
+  }
+  
+  /* Replies List */
+  .wazzup-replies-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .wazzup-reply-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+  }
+  
+  .wazzup-reply-message,
+  .wazzup-reply-admin,
+  .wazzup-reply-timestamp {
+    margin: 5px 0;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Modal Background Overlay */
+.wazzups-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000000;
+}
+
+/* Modal Content Box */
+/* Close Button (X at the top-right) */
+.wazzups-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(221, 0, 0);
+    cursor: pointer;
+}
+
+.wazzups-close-btn:hover {
+    color: red;
+}
+
+/* Modal Content */
+.wazzups-modal-content {
+    position: relative; /* Needed for absolute close button */
+    background: white;
+    height: 60vh;
+    padding: 20px;
+    border-radius: 8px;
+    width: 700px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    overflow-y: auto;
+    flex-direction: column;
+}
+
+
+/* Scrollable Replies Container */
+.wazzups-replies-list {
+    max-height: 45vh; /* Adjust as needed */
+
+    padding-right: 10px;
+}
+
+/* Individual Reply Item */
+.wazzups-reply-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align all text to the left */
+    word-break: break-word;
+}
+
+/* Admin Name */
+.wazzups-reply-admin {
+    font-size: medium;
+    font-weight: bold;
+    margin-bottom: 2px;
+    text-align: left;
+}
+
+/* Timestamp (Left-aligned) */
+.wazzups-reply-timestamp {
+    font-size: small;
+    color: #555;
+    margin-bottom: 6px;
+    text-align: left;
+}
+
+/* Message (Now properly positioned under Date & Time) */
+.wazzups-reply-message {
+    font-size: medium;
+
+
+    color: black;
+    margin-top: 2px;
+    text-align: left;
+}
+

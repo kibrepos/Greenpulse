@@ -1,0 +1,117 @@
+/* Scoped styles for Event View page */
+.event-view-container .dashboard-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 20px;
+  }
+  
+  .event-view-container .event-content {
+    flex-grow: 1;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 900px;
+    margin-left: 220px; /* Ensures content doesn't hide behind the sidebar */
+  }
+  
+  .event-view-container .event-content h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .event-view-container .event-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .event-view-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .event-view-container label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .event-view-container input,
+  .event-view-container textarea {
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .event-view-container input:focus,
+  .event-view-container textarea:focus {
+    border-color: #007bff;
+  }
+  
+  .event-view-container .event-date-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .event-view-container button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+  }
+  
+  .event-view-container button[type="button"]:hover {
+    background-color: #218838;
+  }
+  
+  .event-view-container button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .event-view-container button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .event-view-container button[type="button"] {
+    background-color: #28a745;
+    color: #fff;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .event-view-container button[type="button"]:hover {
+    background-color: #218838;
+  }
+  
+  @media (max-width: 768px) {
+    .event-view-container .dashboard-container {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .event-view-container .event-content {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .event-view-container h2 {
+      font-size: 24px;
+    }
+  }
+  

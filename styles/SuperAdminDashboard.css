@@ -1,0 +1,155 @@
+.super-admin-dashboard {
+    display: flex;
+    height: 100vh; /* Use viewport height to ensure full height */
+}
+
+.super-admin-main {
+    flex: 1;
+    padding: 30px;
+    background-color: #f5f5f5;
+    margin-left: 290px;
+    height: 100vh; /* Use viewport height to ensure full height */
+    overflow-y: auto; /* Add scroll if content overflows */
+}
+
+/* Grid Layout */
+.super-admin-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Center: Dashboard, Right: Activity */
+    gap: 20px;
+    height: 100%; /* Ensure grid takes full height */
+}
+
+/* Middle Section (Cards + Firestore Analytics) */
+.super-admin-dashboard-center {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Admin Overview Cards */
+.super-admin-overview-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.super-admin-card {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    aspect-ratio: 1 / 0.6; /* Makes the card a perfect square */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+}
+
+.super-admin-card h3 {
+    font-size: x-large;
+    color: #333;
+}
+
+.super-admin-card p {
+    font-size: 29px;
+    font-weight: bold;
+    color: #054031;
+}
+
+/* Firestore Analytics */
+.super-admin-firestore-analytics {
+    background-color: #ffffff;
+    color: #00231a;
+    padding: 20px;
+    border-radius: 8px;
+    height: 52vh;
+    text-align: center;
+}
+
+/* Activity Logs Section */
+.super-admin-activity {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 90vh; /* Set a fixed height relative to viewport height */
+    overflow-y: auto; /* Add scroll if content overflows */
+}
+
+.super-admin-activity h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Activity Log Container */
+.super-admin-activity-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Date Header */
+.super-admin-activity-date {
+    background-color: #d32f2f;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    width: fit-content;
+}
+
+/* Activity Entry */
+.super-admin-activity-entry {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Activity Content */
+.super-admin-activity-content {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Red & Green Indicator Icons */
+.super-admin-activity-icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.super-admin-activity-icon.green {
+    color: #4caf50; /* Green for Login */
+}
+
+.super-admin-activity-icon.red {
+    color: #d32f2f; /* Red for Logout */
+}
+
+/* Admin Info */
+.super-admin-activity-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.super-admin-activity-info strong {
+    font-size: 16px;
+}
+
+.super-admin-activity-info p {
+    font-size: 14px;
+    color: #555;
+    margin: 3px 0;
+}
+
+.super-admin-activity-info small {
+    font-size: 12px;
+    color: #777;
+}

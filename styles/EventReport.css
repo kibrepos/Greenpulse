@@ -1,0 +1,329 @@
+/* Container for attendees and attendance sections */
+.eventoreporto-attendee-list-container,
+.eventoreporto-attendance-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Day sections */
+.eventoreporto-attendee-day-section,
+.eventoreporto-attendance-day-section {
+  margin-bottom: 25px;
+}
+
+/* Title styling for each day */
+.eventoreporto-attendee-day-title,
+.eventoreporto-attendance-day-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+/* Chart and table section */
+.eventoreporto-attendee-chart-section,
+.eventoreporto-attendance-chart-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Chart container */
+.eventoreporto-attendee-chart,
+.eventoreporto-attendance-chart {
+  flex: 1;
+  text-align: center;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Chart canvas */
+.eventoreporto-chart-canvas {
+  display: block;
+  margin: 0 auto;
+  width: 100%; /* Full width */
+  max-width: 280px; /* Max width for responsiveness */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Names section (table container) */
+
+.eventoreporto-attendance-names-section {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  max-height: 280px; /* Set a fixed height */
+  min-height: 280px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+.eventoreporto-attendance-names-sectionz {
+  
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    max-height: 500px; /* Set a fixed height */
+    min-height: 500px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+
+.eventoreporto-attendee-names-section{
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    max-height: 333px; /* Set a fixed height */
+    min-height: 333px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+/* Header for names/roles section */
+.eventoreporto-names-header {
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Table styling */
+.eventoreporto-attendee-table,
+.eventoreporto-attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.eventoreporto-attendee-table-header,
+.eventoreporto-attendance-table-header {
+  background-color: #f4f4f4;
+  color: #555;
+  padding: 10px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Table rows */
+.eventoreporto-attendee-row,
+.eventoreporto-attendance-row {
+  border-bottom: 1px solid #ddd;
+}
+
+.eventoreporto-attendee-name,
+.eventoreporto-attendee-section,
+.eventoreporto-attendee-status,
+.eventoreporto-attendance-section {
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.eventoreporto-attendee-name {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Row hover effect */
+.eventoreporto-attendee-row:hover,
+.eventoreporto-attendance-row:hover {
+  background-color: #f7f7f7;
+}
+
+/* Last row without border */
+.eventoreporto-attendee-list-item:last-child,
+.eventoreporto-attendance-list-item:last-child {
+  border-bottom: none;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .eventoreporto-attendee-chart-section,
+  .eventoreporto-attendance-chart-section {
+    flex-direction: column;
+  }
+
+  .eventoreporto-attendee-chart,
+  .eventoreporto-attendee-names-section,
+  .eventoreporto-attendance-chart,
+  .eventoreporto-attendance-names-section {
+    width: 100%; /* Full width for mobile */
+  }
+}
+.eventoreporto-search-input {
+  width: 96%; /* Full width of the container */
+  padding: 10px; /* Add some padding for better usability */
+  margin-bottom: 15px; /* Add spacing below the input */
+  border: 1px solid #a7a4a4; /* Subtle gray border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 14px; /* Adjust font size for readability */
+  outline: none; /* Remove default focus outline */
+  transition: border-color 0.2s, box-shadow 0.2s; /* Smooth focus effect */
+}
+
+/* Add a hover effect for interactivity */
+.eventoreporto-search-input:hover {
+  border-color: #999999; /* Slightly darker gray on hover */
+}
+
+/* Add a focus effect for when the input is active */
+.eventoreporto-search-input:focus {
+  border-color: #6666ff; /* A subtle blue to indicate focus */
+}
+
+
+
+.eventoreporto-event-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.eventoreporto-event-details-left,
+.eventoreporto-event-details-right {
+    flex: 1;
+}
+
+.eventoreporto-event-details-item {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.eventoreporto-event-details-dates-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.eventoreporto-event-details-date {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.eventoreporto-event-details-date strong {
+    font-weight: bold;
+}
+
+.eventoreporto-event-details-date span {
+    color: green;
+}
+
+.eventoreporto-event-details-manager {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+ 
+}
+.eventoreporto-no-data {
+    font-size: 16px;
+    color: #888;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .eventoreporto-task-timeline {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 2px solid #e0e0e0;
+    background-color: #fdfdfd; /* Customizable background */
+  }
+  
+  .eventoreporto-task-timeline-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333; /* Customizable title color */
+  }
+  
+  .eventoreporto-task-timeline-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 4px solid #007bff; /* Status color coding */
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Interactive hover effect */
+  }
+  
+  .eventoreporto-task-timeline-item:hover {
+    background-color: #eef5ff; /* Hover interaction */
+  }
+  
+  .eventoreporto-task-timeline-item p {
+    margin: 5px 0;
+  }
+  
+  .eventoreporto-task-timeline-item strong {
+    font-weight: bold;
+    color: #007bff;
+  }
+  .eventoreporto-task-timeline-item:hover::after {
+    content: attr(data-description); /* Use custom data-description attribute */
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    z-index: 100;
+    white-space: pre-wrap; /* Preserve line breaks */
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

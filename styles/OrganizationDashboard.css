@@ -1,0 +1,184 @@
+
+
+/* Background Image Section */
+.dashboard-background-image-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+
+.dashboard-background-image-container {
+  width: 90%;
+  position: relative;
+  margin-right: 2%;
+}
+
+.dashboard-org-cover {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 10px 10px;
+}
+
+.dashboard-org-profile-container {
+  display: flex;
+ width: 100%;
+  align-items: flex-end; /* Align items to the left */
+  gap: 20px; /* Add space between the profile and name */
+  margin-top: -100px; /* Keep your original offset */
+margin-right: 200px;
+}
+
+.dashboard-org-profile {
+  margin-left: 20px;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  border: 3px solid white;
+  object-fit: cover;
+
+}
+
+.dashboard-org-details {
+
+  text-align: left;
+  padding: 10px 18px;
+  font-size: 1rem;
+  color: #000000;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.dashboard-organization-name {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 80px;
+  color: #000000;
+  text-align: left; 
+}
+
+
+/* Right Sidebar Section */
+.dashboard-right-section {
+  width: 350px;
+  padding: 20px;
+
+
+}
+
+/* Section Boxes */
+.todo-box, .announcements-box, .upcoming-events-box {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.todo-box {
+  background-color: #e3f2fd;
+  border-left: 5px solid #42a5f5;
+}
+
+.announcements-box {
+  background-color: #fff8e1;
+  border-left: 5px solid #fbc02d;
+}
+
+.upcoming-events-box {
+  background-color: #e8f5e9;
+  border-left: 5px solid #66bb6a;
+}
+
+/* Section Titles */
+.todo-box h4, .announcements-box h4, .upcoming-events-box h4 {
+  font-size: 18px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* List Items */
+.todo-box ul, .announcements-box ul, .upcoming-events-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-box ul li, .announcements-box ul li, .upcoming-events-box ul li {
+  background-color: #ffffff;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #2c3e50;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.todo-box ul li:hover, .announcements-box ul li:hover, .upcoming-events-box ul li:hover {
+  background-color: #ecf0f1;
+  cursor: pointer;
+}
+
+/* Links */
+.todo-box ul li a, .announcements-box ul li a, .upcoming-events-box ul li a {
+  color: #2c3e50; /* Ensure links are not blue */
+  text-decoration: none;
+}
+
+.todo-box ul li a:hover, .announcements-box ul li a:hover, .upcoming-events-box ul li a:hover {
+  text-decoration: underline;
+}
+/* Links */
+/* View All Links */
+.view-all-link {
+  color: #000000; /* Black for 'View All' links */
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.view-all-link:hover {
+  text-decoration: underline;
+}
+
+.org-profile-icon-placeholder {
+  width: 45px; /* Adjust size as needed */
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  background-color: #cccccc; /* Light gray background */
+  border-radius: 50%; /* Makes it a circle */
+}
+.profile-placeholder-icon {
+  width: 24px;
+  height: 24px;
+  color: #ffffff; /* Gray color for the icon */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .organization-announcements-container {
+    flex-direction: column;
+  }
+
+  .sidebar-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .dashboard-right-section {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .dashboard-organization-header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
